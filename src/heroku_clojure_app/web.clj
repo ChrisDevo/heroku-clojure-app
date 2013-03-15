@@ -10,7 +10,8 @@
             [ring.middleware.basic-authentication :as basic]
             [cemerick.drawbridge :as drawbridge]
             [environ.core :refer [env]
-            [clj-json.core :as json]]))
+            [clj-json.core :as json]])
+  (:import [java.io StringReader BufferedReader]))
 
 (defn- authenticated? [user pass]
   ;; TODO: heroku config:add REPL_USER=[...] REPL_PASSWORD=[...]

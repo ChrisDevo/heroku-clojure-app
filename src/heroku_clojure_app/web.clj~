@@ -14,6 +14,12 @@
 (defn- authenticated? [user pass]
   ;; TODO: heroku config:add REPL_USER=[...] REPL_PASSWORD=[...]
   (= [user pass] [(env :repl-user false) (env :repl-password false)]))
+  
+(defn what-is-my-ip [request]
+  {:status 200
+   :headers {"Content-Type" "text/plain"}
+   :body (or ((:headers request) "x-forwarded-for")
+      (:remote-addr request))})
 
 (def ^:private drawbridge
   (-> (drawbridge/ring-handler)
@@ -27,6 +33,7 @@
        {:status 200
         :headers {"Content-Type" "text/plain"}
         :body (pr-str ["Hello" :from 'Heroku])})
+  (GET "/whatsmyip" [] what-is-my-ip)
   (ANY "*" []
        (route/not-found (slurp (io/resource "404.html")))))
 

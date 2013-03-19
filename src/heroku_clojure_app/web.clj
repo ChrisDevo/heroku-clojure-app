@@ -1,6 +1,6 @@
 (ns heroku-clojure-app.web
   (:require [compojure.core :refer [defroutes GET PUT POST DELETE ANY]]
-            [compojure.handler :refer [site]]
+            [compojure.handler :refer [site] :as handler]
             [compojure.route :as route]
             [clojure.java.io :as io]
             [ring.middleware.stacktrace :as trace]
@@ -26,16 +26,19 @@
       (session/wrap-session)
       (basic/wrap-basic-authentication authenticated?)))
 
-(defroutes app
+(defroutes app-routes
   (ANY "/repl" {:as req}
        (drawbridge req))
   (GET "/" []
-       {:status 200
-        :headers {"Content-Type" "text/plain"}
-        :body (pr-str ["Hello" :from 'Heroku])})
-  (GET "/whatsmyip" [] what-is-my-ip)
+    {:status 200
+     :headers {"Content-Type" "text/plain"}
+     :body (pr-str ["Moshimoshi" :from 'Heroku])})
+  (route/files "/" {:root "public"})
   (ANY "*" []
        (route/not-found (slurp (io/resource "404.html")))))
+
+(def app
+  (handler/site app-routes))
 
 (defn wrap-error-page [handler]
   (fn [req]

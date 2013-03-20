@@ -33,6 +33,8 @@
     {:status 200
      :headers {"Content-Type" "text/plain"}
      :body (pr-str ["Moshimoshi" :from 'Heroku])})
+  (GET "/whatsmyip" [request]
+    what-is-my-ip)
   (route/files "/" {:root "public"})
   (ANY "*" []
        (route/not-found (slurp (io/resource "404.html")))))

@@ -3,7 +3,7 @@ console.log("'youripis.js' is running...");
 function successFunction(position) {
   var lat = position.coords.latitude;
   var long = position.coords.longitude;
-  console.log('Your latitude is: '+ lat +'\n and longitude is: ' + long);
+//  document.writeln('Your latitude: '+ lat +'\nlongitude: ' + long);
 }
 
 function errorFunction(position) {
@@ -21,8 +21,11 @@ var request = new XMLHttpRequest();
 request.open('GET', 'whatsmyip', false);
 request.send();
 
+var ip = request.responseText;
+
 if (request.status == 200) {
     console.log(request);
-    document.writeln("Your IP address is: " + request.responseText);
+    document.writeln("Your IP address: " + ip);
 }
+
 console.log("'youripis.js' is finished.");

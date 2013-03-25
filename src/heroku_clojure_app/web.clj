@@ -17,7 +17,7 @@
   
 (defn what-is-my-ip [request]
   {:status 200
-   :headers {"Content-Type" "text/plain"}
+   :headers {"Content-Type" "application/json"}
    :body (or ((:headers request) "x-forwarded-for")
       (:remote-addr request))})
 

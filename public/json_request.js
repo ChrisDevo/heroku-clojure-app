@@ -1,9 +1,10 @@
-console.log("json_request.js is running...");
+console.log('json_request.js is running...');
 
 var ip_request = new XMLHttpRequest();
 var ip = '';
 var decimal_ip = 0;
 var ip_array;
+var client_ip = document.getElementById('client_ip');
 
 ip_request.open('GET', 'whatsmyip');
 ip_request.onreadystatechange = function() {
@@ -11,7 +12,9 @@ ip_request.onreadystatechange = function() {
     if ((ip_request.status === 200) &&
            (ip_request.readyState === 4)) {
 
-        ip = ip_request.responseText; console.log("ip: " + ip);
+        ip = ip_request.responseText; console.log('ip: ' + ip);
+        client_ip.innerHTML = ('Your ip is: ' + ip);
+
         ip_array = ip.split('.'); console.log(ip_array);
 
         // convert each IP address segment to decimal
@@ -25,28 +28,23 @@ ip_request.onreadystatechange = function() {
             decimal_ip += ip_array[i];
         }
 
-        console.log("decimal_ip: " + decimal_ip);
+        console.log('decimal_ip: ' + decimal_ip);
     }
 
 }
 ip_request.send();
 
-
-
-document.writeln("Loading country table...\n");
-
 var json_request = new XMLHttpRequest();
 var country_table;
 var country = '';
+var page_status = document.getElementById('page_status');
+
 json_request.open('GET', 'whois.json');
 json_request.onreadystatechange = function() {
-
     if ((json_request.status === 200) &&
         (json_request.readyState === 4)){
 
         var country_table = JSON.parse(json_request.responseText);
-
-
 
         for (var i = 0; i < country_table.length; i++) {
 
@@ -54,20 +52,20 @@ json_request.onreadystatechange = function() {
                 (decimal_ip <= country_table[i].decimal_upper_limit)) {
 
                 country += country_table[i].country;
-                document.writeln("Your country is " + country);
+                page_status.innerHTML = ("Your country is " + country);
                 break;
             }
 
         }
 
         if (country === '') {
-            document.writeln("No country match found");
+            page_status.innerHTML = 'No country match found';
         }
 
-        console.log("Records searched: " + i);
+        console.log('Records searched: ' + i);
 
     }
 }
 json_request.send();
 
-console.log("json_request.js is finished.");
+console.log('json_request.js is finished.');

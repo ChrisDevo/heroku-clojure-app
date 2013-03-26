@@ -4,7 +4,7 @@ var ip_request = new XMLHttpRequest();
 ip_request.open('GET', 'whatsmyip', false);
 ip_request.send();
 
-var ip;
+var ip = '';
 
 if ((ip_request.status === 200) &&
        (ip_request.readyState === 4)) {
@@ -12,9 +12,22 @@ if ((ip_request.status === 200) &&
     console.log("ip: " + ip);
 }
 
-var decimal_ip;
-var d = ip.split('.');
-decimal_ip = d[0]<<24|d[1]<<16|d[2]<<8|d[3];
+var decimal_ip = 0;
+var ip_array = ip.split('.');
+
+console.log(ip_array);
+
+// convert each IP address segment to decimal
+// bit shift operations must be converted to 32bit unsigned using '>>> 0'
+ip_array[0] = (parseInt(ip_array[0]) << 24) >>> 0; console.log(ip_array[0]);
+ip_array[1] = (parseInt(ip_array[1]) << 16) >>> 0; console.log(ip_array[1]);
+ip_array[2] = (parseInt(ip_array[2]) << 8) >>> 0; console.log(ip_array[2]);
+ip_array[3] = (parseInt(ip_array[3])) >>> 0; console.log(ip_array[3]);
+
+for (var i = 0; i < ip_array.length; i++) {
+    decimal_ip += ip_array[i];
+}
+
 console.log("decimal_ip: " + decimal_ip);
 
 var json_request = new XMLHttpRequest();
@@ -33,18 +46,19 @@ if ((json_request.status === 200) &&
         if ((decimal_ip >= country_table[i].decimal_lower_limit) &&
             (decimal_ip <= country_table[i].decimal_upper_limit)) {
 
-            console.log(i);
             country += country_table[i].country;
+            document.writeln("Your country is " + country);
             break;
-
         }
 
-        country = null;
-        console.log("No match found");
-
     }
-}
 
-document.writeln("Your country is " + country);
+    if (country === '') {
+        document.writeln("No country match found");
+    }
+
+    console.log("Records searched: " + i);
+
+}
 
 console.log("json_request.js is finished.");

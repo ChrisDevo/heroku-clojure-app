@@ -3,7 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="d13b28fe-68d1-41d8-885f-64246c9854dc" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/json_request.js" afterPath="$PROJECT_DIR$/public/json_request.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="whispering-inlet-2503.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -20,7 +19,7 @@
     <file path="/project.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363856914856" ignored="false" />
     <file path="$USER_HOME$/heroku-clojure-postgres/project.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363861105438" ignored="false" />
     <file path="/json_request.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364226989738" ignored="false" />
-    <file path="/json_request.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364288927822" ignored="false" />
+    <file path="/json_request.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364293109646" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -82,7 +81,7 @@
       <file leaf-file-name="json_request.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/json_request.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="26" column="49" selection-start="663" selection-end="663" vertical-scroll-proportion="0.4875">
+            <state line="54" column="0" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.84375">
               <folding />
             </state>
           </provider>
@@ -586,7 +585,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/json_request.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="26" column="49" selection-start="663" selection-end="663" vertical-scroll-proportion="0.4875">
+        <state line="54" column="0" selection-start="1533" selection-end="1533" vertical-scroll-proportion="0.84375">
           <folding />
         </state>
       </provider>

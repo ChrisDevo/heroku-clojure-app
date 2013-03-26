@@ -8,14 +8,14 @@ var ip;
 
 if ((ip_request.status === 200) &&
        (ip_request.readyState === 4)) {
-    console.log(ip_request);
     ip = ip_request.responseText;
+    console.log("ip: " + ip);
 }
 
 var decimal_ip;
 var d = ip.split('.');
 decimal_ip = d[0]<<24|d[1]<<16|d[2]<<8|d[3];
-console.log(decimal_ip);
+console.log("decimal_ip: " + decimal_ip);
 
 var json_request = new XMLHttpRequest();
 json_request.open('GET', 'whois.json', false);
@@ -24,22 +24,23 @@ json_request.send();
 if ((json_request.status === 200) &&
     (json_request.readyState === 4)){
 
-    var input = JSON.parse(json_request.responseText);
+    var country_table = JSON.parse(json_request.responseText);
 
     var country = '';
 
-    console.log(input.length);
+    for (var i = 0; i < country_table.length; i++) {
 
-    for (var i = 0; i < input.length; i++) {
-
-        if ((decimal_ip >= input[i].decimal_lower_limit) &&
-            (decimal_ip <= input[i].decimal_upper_limit)) {
+        if ((decimal_ip >= country_table[i].decimal_lower_limit) &&
+            (decimal_ip <= country_table[i].decimal_upper_limit)) {
 
             console.log(i);
-            country += input[i].country;
+            country += country_table[i].country;
             break;
 
         }
+
+        country = null;
+        console.log("No match found");
 
     }
 }

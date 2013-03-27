@@ -1,10 +1,12 @@
 console.log('json_request.js is running...');
 
 var ip_request = new XMLHttpRequest();
-var ip = '';
-var decimal_ip = 0;
+var decimal_request = new XMLHttpRequest();
+var ip;
+var decimal = 0;
 var ip_array;
 var client_ip = document.getElementById('client_ip');
+var decimal_ip = document.getElementById('decimal_ip');
 
 ip_request.open('GET', 'whatsmyip');
 ip_request.onreadystatechange = function() {
@@ -12,8 +14,8 @@ ip_request.onreadystatechange = function() {
     if ((ip_request.status === 200) &&
            (ip_request.readyState === 4)) {
 
-        ip = ip_request.responseText; console.log('ip: ' + ip);
-        client_ip.innerHTML = ('Your ip is: ' + ip);
+        ip = ip_request.responseText;
+        client_ip.innerHTML = ('Your IP is: ' + ip);
 
         ip_array = ip.split('.'); console.log(ip_array);
 
@@ -25,47 +27,34 @@ ip_request.onreadystatechange = function() {
         ip_array[3] = (parseInt(ip_array[3])) >>> 0; console.log(ip_array[3]);
 
         for (var i = 0; i < ip_array.length; i++) {
-            decimal_ip += ip_array[i];
+            decimal += ip_array[i];
         }
-
         console.log('decimal_ip: ' + decimal_ip);
+
+        var decimal_request = new XMLHttpRequest();
+        var country = '';
+        var query = 'whatsmydecimalip?';
+        query += decimal;
+
+        console.log('ip: ' + decimal);
+        console.log(query);
+
+        decimal_request.open('GET', query);
+        decimal_request.onreadystatechange = function() {
+
+            if ((decimal_request.status === 200) &&
+                (decimal_request.readyState === 4)) {
+
+                console.log(decimal_request.responseText);
+                decimal_ip.innerHTML = "Your decimal IP is: " +
+                    decimal_request.responseText;
+
+            }
+        }
+        decimal_request.send();
     }
 
 }
 ip_request.send();
-
-var json_request = new XMLHttpRequest();
-var country_table;
-var country = '';
-var page_status = document.getElementById('page_status');
-
-json_request.open('GET', 'whois.json');
-json_request.onreadystatechange = function() {
-    if ((json_request.status === 200) &&
-        (json_request.readyState === 4)){
-
-        var country_table = JSON.parse(json_request.responseText);
-
-        for (var i = 0; i < country_table.length; i++) {
-
-            if ((decimal_ip >= country_table[i].decimal_lower_limit) &&
-                (decimal_ip <= country_table[i].decimal_upper_limit)) {
-
-                country += country_table[i].country;
-                page_status.innerHTML = ("Your country is " + country);
-                break;
-            }
-
-        }
-
-        if (country === '') {
-            page_status.innerHTML = 'No country match found';
-        }
-
-        console.log('Records searched: ' + i);
-
-    }
-}
-json_request.send();
 
 console.log('json_request.js is finished.');

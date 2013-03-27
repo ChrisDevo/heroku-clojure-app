@@ -2,6 +2,7 @@
   (:require [compojure.core :refer [defroutes GET PUT POST DELETE ANY]]
             [compojure.handler :refer [site] :as handler]
             [compojure.route :as route]
+            [clojure.data.json :as json]
             [clojure.java.io :as io]
             [ring.middleware.stacktrace :as trace]
             [ring.middleware.session :as session]
@@ -21,6 +22,11 @@
    :body (or ((:headers request) "x-forwarded-for")
       (:remote-addr request))})
 
+(defn what-is-my-decimal-ip [request]
+  {:status 200
+   :headers {"Content-Type" "application/json"}
+   :body (:query-string request)})
+
 (def ^:private drawbridge
   (-> (drawbridge/ring-handler)
       (session/wrap-session)
@@ -35,6 +41,8 @@
      :body (pr-str ["Moshimoshi" :from 'Heroku])})
   (GET "/whatsmyip" [request]
     what-is-my-ip)
+  (GET "/whatsmydecimalip" [request]
+    what-is-my-decimal-ip)
   (route/files "/" {:root "public"})
   (ANY "*" []
        (route/not-found (slurp (io/resource "404.html")))))

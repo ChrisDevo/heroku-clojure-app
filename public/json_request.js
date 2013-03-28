@@ -59,7 +59,7 @@ country_request.onreadystatechange = function() {
     if ((country_request.status === 200) &&
         (country_request.readyState === 4)) {
 
-        console.log(country_request.responseText);
+        console.log('Response: ' + country_request.responseText);
         country.innerHTML = "Your country is: " + country_request.responseText;
 
     }

@@ -2,14 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d13b28fe-68d1-41d8-885f-64246c9854dc" name="Default" comment="">
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.lein-repl-history" afterPath="$PROJECT_DIR$/.lein-repl-history" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/json_request.js" afterPath="$PROJECT_DIR$/public/json_request.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="whispering-inlet-2503.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364464713893" ignored="false" />
     <file path="/whatsmyip.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364211002873" ignored="false" />
     <file path="/youripis.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364226849705" ignored="false" />
-    <file path="/web.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364489334156" ignored="false" />
+    <file path="/web.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364493205341" ignored="false" />
     <file path="/404.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363689955031" ignored="false" />
     <file path="/fragment.java" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363706529306" ignored="false" />
     <file path="$USER_HOME$/compojure-demo/src/compojure_demo/handler.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363706983793" ignored="false" />
@@ -19,7 +22,7 @@
     <file path="/project.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364394201708" ignored="false" />
     <file path="$USER_HOME$/heroku-clojure-postgres/project.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363861105438" ignored="false" />
     <file path="/json_request.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364487513120" ignored="false" />
-    <file path="/json_request.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364487784773" ignored="false" />
+    <file path="/json_request.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364491524389" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -81,7 +84,7 @@
       <file leaf-file-name="json_request.js" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/public/json_request.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="64" column="4" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.0">
+            <state line="58" column="43" selection-start="1943" selection-end="1989" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -99,7 +102,7 @@
       <file leaf-file-name="web.clj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="55" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.7586207">
+            <state line="67" column="93" selection-start="2346" selection-end="2346" vertical-scroll-proportion="0.710303">
               <folding />
             </state>
           </provider>
@@ -176,7 +179,7 @@
   <component name="ProjectFrameBounds">
     <option name="x" value="49" />
     <option name="y" value="24" />
-    <option name="width" value="913" />
+    <option name="width" value="1339" />
     <option name="height" value="997" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -434,7 +437,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="24" width="913" height="997" extended-state="0" />
+    <frame x="49" y="24" width="1339" height="997" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -618,14 +621,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/public/json_request.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="64" column="4" selection-start="2127" selection-end="2127" vertical-scroll-proportion="0.0">
+        <state line="58" column="43" selection-start="1943" selection-end="1989" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="55" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.7586207">
+        <state line="67" column="93" selection-start="2346" selection-end="2346" vertical-scroll-proportion="0.710303">
           <folding />
         </state>
       </provider>

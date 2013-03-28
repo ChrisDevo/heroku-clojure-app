@@ -40,7 +40,8 @@
     (last ip-bigints)))
 
 (defn get-country [select-fn result-fn records]
-  (map result-fn (filter select-fn records)))
+  (map result-fn (filter select-fn records))
+  "no match")
 
 (defn select-within [rec query]
   (and (<= (Long/parseLong (:decimal_lower_limit rec)) query)
@@ -59,8 +60,14 @@
 (defn what-is-my-country [request]
   {:status 200
    :headers {"Content-Type" "text/plain"}
-   :body (str (get-country #(select-within % 3261761842;(ip-to-decimal (ip-to-long (mapify-ip (get-ip request))))
-           ) :country ip-country-table))})
+   :body ;"country name"; works
+         ;(get-ip request); works
+         ;(str (mapify-ip (get-ip request))); works
+         ;(ip-to-long (mapify-ip (get-ip request))); works
+         ;(str (ip-to-decimal (ip-to-long (mapify-ip (get-ip request))))); works
+          (str (first (get-country #(select-within % 3261761842) :country ip-country-table)))
+         ;(get-country #(select-within % (ip-to-decimal (ip-to-long (mapify-ip (get-ip request))))) :country ip-country-table)
+   })
 
 (def ^:private drawbridge
   (-> (drawbridge/ring-handler)

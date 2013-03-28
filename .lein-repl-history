@@ -355,3 +355,18 @@ ip-string
 ip-string
 (clojure.string/split ip-string #"\.")))
 (clojure.string/split ip-string #"\.")
+(def ip-country-table
+)
+(require '[clojure.data.json :as json])
+(def ip-country-table
+(json/read-str (slurp "public/whois.json")
+:key-fn keyword))
+(defn get-country [select-fn result-fn records]
+(map result-fn (filter select-fn records)))
+(defn select-within [rec query]
+(and (<= (Long/parseLong (:decimal_lower_limit rec)) query)
+(<= query (Long/parseLong (:decimal_upper_limit rec)))))
+(get-country #(select-within % 3261761842) :country ip-country-table)
+(str (get-country #(select-within % 3261761842) :country ip-country-table))
+(pr-str (get-country #(select-within % 3261761842) :country ip-country-table))
+(first (get-country #(select-within % 3261761842) :country ip-country-table))

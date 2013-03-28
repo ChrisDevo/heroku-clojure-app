@@ -43,8 +43,8 @@
   (map result-fn (filter select-fn records)))
 
 (defn select-within [rec query]
-  (and (<= (bigint (:decimal_lower_limit rec)) query)
-         (<= query (bigint (:decimal_upper_limit)))))
+  (and (<= (Long/parseLong (:decimal_lower_limit rec)) query)
+         (<= query (Long/parseLong (:decimal_upper_limit)))))
 
 (defn what-is-my-ip [request]
   {:status 200

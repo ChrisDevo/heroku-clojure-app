@@ -99,7 +99,7 @@
       <file leaf-file-name="web.clj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="61" column="13" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.80121213">
+            <state line="61" column="55" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.7586207">
               <folding />
             </state>
           </provider>
@@ -625,7 +625,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="61" column="13" selection-start="1995" selection-end="1995" vertical-scroll-proportion="0.80121213">
+        <state line="61" column="55" selection-start="2037" selection-end="2037" vertical-scroll-proportion="0.7586207">
           <folding />
         </state>
       </provider>

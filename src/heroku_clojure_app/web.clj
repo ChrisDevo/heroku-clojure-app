@@ -59,7 +59,7 @@
 (defn what-is-my-country [request]
   {:status 200
    :headers {"Content-Type" "text/plain"}
-   :body (str (get-country #(select-within % (ip-to-decimal (ip-to-long (mapify-ip (get-ip request))))
+   :body (pr-str (get-country #(select-within % (ip-to-decimal (ip-to-long (mapify-ip (get-ip request))))
            ) :country ip-country-table))})
 
 (def ^:private drawbridge

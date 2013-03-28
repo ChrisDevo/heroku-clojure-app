@@ -1,7 +1,6 @@
 console.log('json_request.js is running...');
 
 var ip_request = new XMLHttpRequest();
-var decimal_request = new XMLHttpRequest();
 var ip;
 var decimal = 0;
 var ip_array;
@@ -29,17 +28,12 @@ ip_request.onreadystatechange = function() {
         for (var i = 0; i < ip_array.length; i++) {
             decimal += ip_array[i];
         }
+
         console.log('decimal_ip: ' + decimal_ip);
 
         var decimal_request = new XMLHttpRequest();
-        var country = '';
-        var query = 'whatsmydecimalip?';
-        query += decimal;
 
-        console.log('ip: ' + decimal);
-        console.log(query);
-
-        decimal_request.open('GET', query);
+        decimal_request.open('GET', 'whatsmydecimalip');
         decimal_request.onreadystatechange = function() {
 
             if ((decimal_request.status === 200) &&
@@ -56,5 +50,21 @@ ip_request.onreadystatechange = function() {
 
 }
 ip_request.send();
+
+var country = document.getElementById('country');
+var country_request = new XMLHttpRequest();
+country_request.open('GET', "whatsmycountry");
+country_request.onreadystatechange = function() {
+
+    if ((country_request.status === 200) &&
+        (country_request.readyState === 4)) {
+
+        console.log(country_request.responseText);
+        country.innerHTML = "Your country is: " + country_request.responseText;
+
+    }
+
+}
+country_request.send();
 
 console.log('json_request.js is finished.');

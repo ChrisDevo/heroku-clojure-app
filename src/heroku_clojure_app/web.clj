@@ -4,6 +4,7 @@
             [compojure.route :as route]
             [clojure.data.json :as json]
             [clojure.java.io :as io]
+            [clojure.string :as string]
             [ring.middleware.stacktrace :as trace]
             [ring.middleware.session :as session]
             [ring.middleware.session.cookie :as cookie]
@@ -16,16 +17,50 @@
   ;; TODO: heroku config:add REPL_USER=[...] REPL_PASSWORD=[...]
   (= [user pass] [(env :repl-user false) (env :repl-password false)]))
   
+(def ip-country-table
+  (json/read-str
+    (slurp "public/whois.json")
+    :key-fn keyword))
+
+(defn get-ip [request]
+  (or ((:headers request) "x-forwarded-for")
+    (:remote-addr request)))
+
+(defn mapify-ip [ip-string]
+  (string/split ip-string #"\."))
+
+(defn ip-to-long [ip-map]
+  (map #(Long/parseLong %) ip-map))
+
+(defn ip-to-decimal [ip-bigints]
+  (+
+    (bit-shift-left (first ip-bigints) 24)
+    (bit-shift-left (second ip-bigints) 16)
+    (bit-shift-left (nth ip-bigints 2) 8)
+    (last ip-bigints)))
+
+(defn get-country [select-fn result-fn records]
+  (map result-fn (filter select-fn records)))
+
+(defn select-within [rec query]
+  (and (<= (bigint (:decimal_lower_limit rec)) query)
+         (<= query (bigint (:decimal_upper_limit)))))
+
 (defn what-is-my-ip [request]
   {:status 200
-   :headers {"Content-Type" "application/json"}
-   :body (or ((:headers request) "x-forwarded-for")
-      (:remote-addr request))})
+   :headers {"Content-Type" "text/plain"}
+   :body (get-ip request)})
 
 (defn what-is-my-decimal-ip [request]
   {:status 200
-   :headers {"Content-Type" "application/json"}
-   :body (:query-string request)})
+   :headers {"Content-Type" "text/plain"}
+   :body (str (ip-to-decimal (ip-to-long (mapify-ip (get-ip request)))))})
+
+(defn what-is-my-country [request]
+  {:status 200
+   :headers {"Content-Type" "text/plain"}
+   :body (str (get-country #(select-within % (ip-to-decimal (ip-to-long (mapify-ip (get-ip request))))
+           ) :country ip-country-table))})
 
 (def ^:private drawbridge
   (-> (drawbridge/ring-handler)
@@ -38,11 +73,13 @@
   (GET "/" []
     {:status 200
      :headers {"Content-Type" "text/plain"}
-     :body (pr-str ["Moshimoshi" :from 'Heroku])})
+     :body (pr-str (first ip-country-table))})
   (GET "/whatsmyip" [request]
     what-is-my-ip)
   (GET "/whatsmydecimalip" [request]
     what-is-my-decimal-ip)
+  (GET "/whatsmycountry" [request]
+    what-is-my-country)
   (route/files "/" {:root "public"})
   (ANY "*" []
        (route/not-found (slurp (io/resource "404.html")))))

@@ -115,3 +115,243 @@ partial-records
 (defn select-within [rec query]
 (and (<= ("decimal_lower_limit" rec) query) (<= query ("decimal_upper_limit" rec))))
 (find-matching #(select-within % 16777217) "country" partial-records)
+(map s
+)
+(require '[clojure.data.json :as json])
+(def Whois
+(json/read-str (slurp "public/whois.json")
+:key-fn key))
+(def Whois
+(json/read-str (slurp "public/whois.json")
+:key-fn keyword))
+(first Whois)
+(filter (= "Australia") (first Whois))
+(filter (= "Australia" (first Whois))
+)
+(filter  #(= "Australia") (first Whois))
+(filter  #(= "Australia" rec) (first Whois))
+(map (first Whois))
+(map = "Australia" (first Whois))
+(map = "ip_upper_limit" (first Whois))
+(map = ":ip_lower_limit "1.0.0.0"" (first Whois))
+(filter  #(= "Australia" %) (first Whois))
+(filter  #(= :ip_lower_limit  %) (first Whois))
+(filter  #(= ":ip_lower_limit"  %) (first Whois))
+(filter  #(= 1.0.0.0  %) (first Whois))
+(filter  #(= "1.0.0.0"  %) (first Whois))
+(filter  #(= ":ip_lower_limit "1.0.0.0""  %) (first Whois))
+(filter  #(= % :ip_lower_limit) (first Whois))
+(filter  #(= % "Australia") (first Whois))
+find-matching
+#find-matching
+()
+'find-matching
+user/Whois
+(defn find-matching [select-fn result-fn records]
+(map result-fn (filter select-fn records)))
+(defn match-ip [rec decimal-ip]
+(and (<= (:decimal_lower_limit rec) decimal-ip) (<= (:decimal_upper_limit 
+rec))))
+(find-matching #(select-within % "16777217") :country Whois)
+(find-matching #(match-ip % "16777217") :country Whois)
+(match-ip (first Whois) "16777217")
+(match-ip (first Whois) '16777217)
+(match-ip (first Whois) 16777217)
+(first Whois)
+(:ip_lower_limit (first Whois))
+(:decimal_lower_limit (first Whois))
+(= "16777216" (:decimal_lower_limit (first Whois)))
+(< "16777217" (:decimal_lower_limit (first Whois)))
+(class "16777217")
+(class 12)
+(class 16777217)
+(cast "16777217" java.lang.Long)
+(read-str "16777217")
+(long "16777217")
+(Long "16777217")
+~"16777217"
+(~"16777217")
+(defn to-long [str]
+)
+read-str
+(defn to-long [str]
+(let [n (read-string str)]
+(if (number? n) n nil)))
+(to-long "16777217")
+(= "16777216" (:decimal_lower_limit (first Whois)))
+(= 16777216 (to-long (:decimal_lower_limit (first Whois))))
+(defn select-within [rec query]
+(and
+(<= (to-long (:decimal_lower_limit rec)) query)
+(<= query (to-long (:decimal_upper_limit rec)))))
+(find-matching #(select-within % 16777217) :country Whois)
+~(find-matching #(select-within % 16777217) :country Whois)
+(find-matching #(select-within % 16777217) :country Whois)
+(find-matching #(select-within % 3261761842) :country Whois)
+(Long. "16777217")
+(long "16777217")
+(bigdec "16777217")
+(num "16777217")
+(bigint "16777217")
+(< "1.0.0.0" "1.0.0.1")
+(split "1.0.0.0" #"\.")
+(clojure.string/split "1.0.0.0" #"\.")
+(bit-shift-left 127 24)
+(bit-shift-left 127 23)
+(bit-shift-left "127" 23)
+(bit-shift-left (long.parseLong "127") 23)
+(bit-shift-left (Long.parseLong "127") 23)
+(Long/parseLong "127")
+(bit-shift-left 127 24)
+(< "127" 127)
+(< '"127" 127)
+(< #"127" 127)
+'"127"
+~"127"
+(~ "127")
+(quote "127")
+(string/split "1.0.0.0")
+(clojure.string/split "1.0.0.0")
+(clojure.string/split "1.0.0.0" #"\.")
+(walk bigint (clojure.string/split "1.0.0.0" #"\."))
+(clojure.walk/walk bigint (clojure.string/split "1.0.0.0" #"\."))
+(use 'clojure.walk)
+(walk (clojure.string/split #"\.") bigint "1.0.0.0")
+(walk (clojure.string/split % #"\.") bigint "1.0.0.0")
+(walk #(bigint %) #(clojure.string/split % #"\.") "1.0.0.0")
+(walk #(+ %) #(clojure.string/split % #"\.") "1.0.0.0")
+(walk #(clojure.string/split % #"\.") #(bigint %) "1.0.0.0")
+(walk #(+ (bigint %)) #(clojure.string/split % #"\.") "1.0.0.0")
+(walk #(apply + (bigint %)) #(clojure.string/split % #"\.") "1.0.0.0")
+(walk #(apply + %) #(clojure.string/split % #"\.") "1.0.0.0")
+(walk #(clojure.string/split % #"\.") #(apply + %) "1.0.0.0")
+(walk #(clojure.string/split % #"\.") #(apply + (bigint %)) "1.0.0.0")
+(use 'clojure.string.split)
+(use 'clojure.string/split)
+(use clojure.string/split)
+(use 'clojure.string)
+(use 'clojure.string :only split)
+(clojure.string/split "1.0.0.0" #"\.")
+(apply bigint ["1" "0" "0" "0"])
+(map bigint ["1" "0" "0" "0"])
+(apply + (map bigint ["1" "0" "0" "0"]))
+(apply + (map bigint ["127" "0" "0" "0"]))
+(apply + (map Long/parseLong ["127" "0" "0" "0"]))
+(apply + (map Long.parseLong ["127" "0" "0" "0"]))
+(apply + (map bigint ["127" "0" "0" "0"]))
+(-> [127 0 0 1]
+(first bit-shift-left 24))
+(bit-shift-left (first [127 0 0 1]) 24)
+(-> [127 0 0 1]
+first)
+(-> [127 0 0 1]
+first
+bit-shift-left 24)
+(-> [127 0 0 1]
+first
+(bit-shift-left % 24)
+)
+(-> [127 0 0 1]
+(bit-shift-left first 24))
+(-> [127 0 0 1]
+first)
+(defn decimal-ip [a b c d]
+(bit-shift-left a 24))
+(decimal-ip [127 0 0 1])
+(defn decimal-ip [coll]
+(bit-shift-left (first coll) 24))
+(decimal-ip [127 0 0 1])
+(defn decimal-ip [coll]
+(bit-shift-left (first coll) 24)
+(bit-shift-left (second coll) 16))
+(decimal-ip [coll]
+(bit-shift-left (first coll) 24)
+(bit-shift-left (second coll) 16))
+(defn decimal-ip [coll]
+(bit-shift-left (first coll) 24)
+(bit-shift-left (second coll) 16)
+(bit-shift-left (nth coll 2) 8))
+(decimal-ip [127 0 0 1])
+(defn decimal-ip [coll]
+(bit-shift-left (first coll) 24)
+(bit-shift-left (second coll) 16)
+(bit-shift-left (nth coll 2) 8)
+[coll])
+(decimal-ip [127 0 0 1])
+(defn decimal-ip [coll]
+(apply +
+(bit-shift-left (first coll) 24)
+(bit-shift-left (second coll) 16)
+(bit-shift-left (nth coll 2) 8)
+last)
+)
+(decimal-ip [127 0 0 1])
+(defn decimal-ip [coll]
+(apply +
+(bit-shift-left (first coll) 24)
+(bit-shift-left (second coll) 16)
+(bit-shift-left (nth coll 2) 8)
+(last coll)))
+(decimal-ip [127 0 0 1])
+(defn decimal-ip [coll]
+(+
+(bit-shift-left (first coll) 24)
+(bit-shift-left (second coll) 16)
+(bit-shift-left (nth coll 2) 8)
+(last coll)))
+(decimal-ip [127 0 0 1])
+(defn ip-to-bigints [ip-string]
+(map bigint
+(clojure.string/split ip-string #"\.")))
+(ip-to-bigints ["127" "0" "0" "1"])
+(clojure.string/split ["127" "0" "0" "1"] #"\.")
+(map bigint ["127" "0" "0" "1"])
+(defn ip-to-bigints [coll]
+(map bigint coll))
+(ip-to-bigints ["127" "0" "0" "1"]_
+)
+(ip-to-bigints ["127" "0" "0" "1"])
+(defn ip-to-decimal [coll]
+(+
+(bit-shift-left (first ip-bigints) 24)
+    (bit-shift-left (second ip-bigints) 16)
+    (bit-shift-left (nth ip-bigints 2) 8)
+    (last ip-bigints)))
+(defn ip-to-decimal [ip-bigints]
+(+
+(bit-shift-left (first ip-bigints) 24)
+    (bit-shift-left (second ip-bigints) 16)
+    (bit-shift-left (nth ip-bigints 2) 8)
+    (last ip-bigints)))
+(ip-to-decimal [127 0 0 1])
+(ip-to-decimal (ip-to-bigints ["127" "0" "0" "1"]))
+(ip-to-decimal ["127" "0" "0" "1"])
+(def ip-string ["127" "0" "0" "1"])
+ip-string
+ip-to-bigints
+'ip-to-bigints
+(ip-to-bigints ip-string)
+(ip-to-decimal (ip-to-bigints ip-string))
+(defn ip-to-long [coll]
+(map Long. coll))
+(Long/parseLong "127")
+(defn ip-to-long [coll]
+(map Long/parseLong coll))
+(Long/parseLong "127")
+(defn ip-to-long [coll]
+(map Long.parseLong coll))
+(defn ip-to-long [coll]
+(map #Long.parseLong coll))
+(defn ip-to-long [coll]
+(apply #Long.parseLong coll))
+(map Long/parseLong ip-string)
+(Long/parseLong ip-string)
+(apply #(Long/parseLong %) ip-string)
+(map #(Long/parseLong %) ip-string)
+(map bigint ["127" "0" "0" "1"])
+(clojure.string/split ip-string #"\.")))
+ip-string
+(def ip-string "127.0.0.1")
+ip-string
+(clojure.string/split ip-string #"\.")))
+(clojure.string/split ip-string #"\.")

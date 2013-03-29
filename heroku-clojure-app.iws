@@ -241,7 +241,7 @@ under the License.
     </configuration> 
   </component>  
   <component name="VcsManagerConfiguration"> 
-    <option name="ACTIVE_VCS_NAME" value=""/>  
+    <option name="ACTIVE_VCS_NAME" value="git"/>  
     <option name="STATE" value="0"/> 
   </component>  
   <component name="VssConfiguration"> 

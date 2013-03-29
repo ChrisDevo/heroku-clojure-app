@@ -2,7 +2,7 @@
 <project version="4">
   <component name="ProjectModuleManager">
     <modules>
-      <module fileurl="file://$PROJECT_DIR$/whispering-inlet-2503.iml" filepath="$PROJECT_DIR$/whispering-inlet-2503.iml" />
+      <module fileurl="file://$PROJECT_DIR$/heroku-clojure-app.iml" filepath="$PROJECT_DIR$/heroku-clojure-app.iml" />
     </modules>
   </component>
 </project>

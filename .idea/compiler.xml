@@ -22,7 +22,7 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <processorPath useClasspath="true" />
-        <module name="whispering-inlet-2503" />
+        <module name="heroku-clojure-app" />
       </profile>
     </annotationProcessing>
   </component>

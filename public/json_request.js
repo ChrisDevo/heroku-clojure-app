@@ -29,27 +29,29 @@ ip_request.onreadystatechange = function() {
             decimal += ip_array[i];
         }
 
-        console.log('decimal_ip: ' + decimal_ip);
 
-        var decimal_request = new XMLHttpRequest();
-
-        decimal_request.open('GET', 'whatsmydecimalip');
-        decimal_request.onreadystatechange = function() {
-
-            if ((decimal_request.status === 200) &&
-                (decimal_request.readyState === 4)) {
-
-                console.log(decimal_request.responseText);
-                decimal_ip.innerHTML = "Your decimal IP is: " +
-                    decimal_request.responseText;
-
-            }
-        }
-        decimal_request.send();
     }
 
 }
 ip_request.send();
+
+console.log('decimal_ip: ' + decimal_ip);
+
+    var decimal_request = new XMLHttpRequest();
+
+    decimal_request.open('GET', 'whatsmydecimalip');
+    decimal_request.onreadystatechange = function() {
+
+    if ((decimal_request.status === 200) &&
+        (decimal_request.readyState === 4)) {
+
+        console.log(decimal_request.responseText);
+        decimal_ip.innerHTML = "Your decimal IP is: " +
+        decimal_request.responseText;
+
+    }
+}
+decimal_request.send();
 
 var country = document.getElementById('country');
 var country_request = new XMLHttpRequest();

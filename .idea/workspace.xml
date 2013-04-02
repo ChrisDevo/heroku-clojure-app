@@ -2,16 +2,14 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d13b28fe-68d1-41d8-885f-64246c9854dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.lein-repl-history" afterPath="$PROJECT_DIR$/.lein-repl-history" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="whispering-inlet-2503.iws" />
     <ignored path=".idea/workspace.xml" />
     <file path="/Dummy.txt" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364889995733" ignored="false" />
     <file path="/whatsmyip.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364564548480" ignored="false" />
     <file path="/youripis.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364226849705" ignored="false" />
-    <file path="/web.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364911819400" ignored="false" />
+    <file path="/web.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364912384681" ignored="false" />
     <file path="/404.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363689955031" ignored="false" />
     <file path="/fragment.java" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363706529306" ignored="false" />
     <file path="$USER_HOME$/compojure-demo/src/compojure_demo/handler.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363706983793" ignored="false" />
@@ -142,7 +140,7 @@
       <file leaf-file-name="web.clj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="107" column="43" selection-start="4010" selection-end="4010" vertical-scroll-proportion="1.861949">
+            <state line="158" column="23" selection-start="5553" selection-end="5553" vertical-scroll-proportion="0.9651972">
               <folding />
             </state>
           </provider>
@@ -630,7 +628,7 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="107" column="43" selection-start="4010" selection-end="4010" vertical-scroll-proportion="1.861949">
+        <state line="158" column="23" selection-start="5553" selection-end="5553" vertical-scroll-proportion="0.9651972">
           <folding />
         </state>
       </provider>

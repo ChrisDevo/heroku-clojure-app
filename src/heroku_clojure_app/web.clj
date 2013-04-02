@@ -101,11 +101,12 @@
     (Long/parseLong
       (first
         (get-vat-rate
-          (get-country ip-in-range?
-            (ip-to-decimal
-              (ip-to-long
-                (ip-to-vector
-                  (get-ip request))))))))))
+          (first
+            (get-country ip-in-range?
+              (ip-to-decimal
+                (ip-to-long
+                  (ip-to-vector
+                    (get-ip request)))))))))))
 
 (def ^:private drawbridge
   (-> (drawbridge/ring-handler)

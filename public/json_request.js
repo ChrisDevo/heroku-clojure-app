@@ -55,18 +55,35 @@ decimal_request.send();
 
 var country = document.getElementById('country');
 var country_request = new XMLHttpRequest();
-country_request.open('GET', "whatsmycountry");
+country_request.open('GET', 'whatsmycountry');
 country_request.onreadystatechange = function() {
 
     if ((country_request.status === 200) &&
         (country_request.readyState === 4)) {
 
         console.log('Response: ' + country_request.responseText);
-        country.innerHTML = "Your country is: " + country_request.responseText;
+        country.innerHTML = 'Your country is: ' + country_request.responseText;
 
     }
 
 }
 country_request.send();
+
+var vat_rate = document.getElementById('vat_rate');
+var vat_request = new XMLHttpRequest();
+vat_request.open('GET', 'whatsmyvatrate');
+vat_request.onreadystatechange = function() {
+
+    if ((vat_request.status === 200) &&
+        (vat_request.readyState === 4)) {
+
+        console.log('Response: ' + vat_request.responseText);
+        vat_rate.innerHTML = 'Your vat rate is: ' +
+            vat_request.responseText ' percent';
+
+    }
+
+}
+vat_request.send();
 
 console.log('json_request.js is finished.');

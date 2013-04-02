@@ -370,3 +370,104 @@ ip-string
 (str (get-country #(select-within % 3261761842) :country ip-country-table))
 (pr-str (get-country #(select-within % 3261761842) :country ip-country-table))
 (first (get-country #(select-within % 3261761842) :country ip-country-table))
+(def ip-country-table
+  (json/read-str
+    (slurp "public/whois.json")
+    :key-fn keyword))
+(require [clojure.data.json :as json])
+(require '[clojure.data.json :as json])
+(def ip-country-table
+  (json/read-str
+    (slurp "public/whois.json")
+    :key-fn keyword))
+(def country-vat-table
+  (json/read-str
+    (slurp "public/eu_vat_rates.json")
+    :key-fn keyword))
+(defn get-vat-rate [country]
+  (get country-vat-table country)
+)
+(get-vat-rate "Ireland")
+(get-vat-rate ["Ireland"])
+(defn get-vat-rate [country]
+  (get country-vat-table :country))
+(get-vat-rate ["Ireland"])
+(json/write-str country-vat-table)
+(defn get-vat-rate [country vat-rate]
+  (map country (filter vat-rate country-vat-table))
+)
+(get-vat-rate "Ireland" country-vat-table)
+(get-in country-vat-table [:country :vat_rate])
+(get-in country-vat-table [:country])
+(filter #(contains % country-vat-table) :country)
+(filter #(contains? % country-vat-table) :country)
+(defn get-country [ip-in-range? country ip-country-table]
+    (map country (filter ip-in-range? ip-country-table)))
+(defn ip-in-range? [ip-range decimal-ip]
+  (and (<= (Long/parseLong (:decimal_lower_limit ip-range)) decimal-ip)
+         (<= decimal-ip (Long/parseLong (:decimal_upper_limit ip-range)))))
+(get-country #(ip-in-range? % 22222222) :country ip-country-table)
+(keys country-vat-table)
+(keys ip-country-table)
+(str ip-country-table)
+(str country-vat-table_
+)
+(str country-vat-table)
+(keys (first country-vat-table))
+(def country-vat-table
+  (json/read-str
+    (slurp "public/eu_vat_rates.json")
+    :key-fn keyword))
+(require '[clojure.data.json :as json])
+(def country-vat-table
+  (json/read-str
+    (slurp "public/eu_vat_rates.json")
+    :key-fn keyword))
+(filter #(= :country "Ireland") country-vat-table)
+(require '[clojure.data.json :as json])
+(json/read "public.eu_vat_rates.json)
+")
+(json/read "public.eu_vat_rates.json")
+(json/read-str "public.eu_vat_rates.json")
+(json/read-str "public/eu_vat_rates.json")
+(json/read (slurp "public/eu_vat_rates.json"))
+(json/read-str (slurp "public/eu_vat_rates.json"))
+(json/read-str (slurp "public/eu_vat_rates.json") :value-fn)
+(json/read-str (slurp "public/eu_vat_rates.json") :value-fn val)
+(json/read-str (slurp "public/eu_vat_rates.json") :key-fn keyword)
+(def country-vat-table
+  (json/read-str
+    (slurp "public/eu_vat_rates.json")
+    :key-fn keyword))
+(filter #(= (:country %) "Ireland") country-vat-table)
+(get :vat_rate (filter #(= (:country %) "Ireland") country-vat-table))
+(get (filter #(= (:country %) "Ireland") country-vat-table) :vat_rate)
+(get (first (filter #(= (:country %) "Ireland") country-vat-table)) :vat_rate)
+(get (peek (filter #(= (:country %) "Ireland") country-vat-table)) :vat_rate)
+(get (first (filter #(= (:country %) "Ireland") country-vat-table)) :vat_rate)
+(list? (get (first (filter #(= (:country %) "Ireland") country-vat-table)) :vat_rate))
+(coll? (get (first (filter #(= (:country %) "Ireland") country-vat-table)) :vat_rate))
+(vector? (get (first (filter #(= (:country %) "Ireland") country-vat-table)) :vat_rate))
+(set? (get (first (filter #(= (:country %) "Ireland") country-vat-table)) :vat_rate))
+(map? (get (first (filter #(= (:country %) "Ireland") country-vat-table)) :vat_rate))
+(seq? (get (first (filter #(= (:country %) "Ireland") country-vat-table)) :vat_rate))
+(unquote (get (first (filter #(= (:country %) "Ireland") country-vat-table)) :vat_rate))
+(get (first (filter #(= (:country %) "Ireland") country-vat-table)) :vat_rate)
+(filter #(= (:country %) "Ireland")
+)
+(filter #(= (:country %) "Ireland") country-vat-table)
+(type (filter #(= (:country %) "Ireland") country-vat-table))
+(type (first (filter #(= (:country %) "Ireland") country-vat-table)))
+(map :vat_rate (filter #(= (:country %) "Ireland") country-vat-table))
+(defn get-vat-rate [country]
+  (map :vat_rate (filter #(= (:country %) country) country-vat-table)))
+(get-vat-rate "Ireland")
+(get-vat-rate "United Kingdom")
+(Long/parseLong (get-vat-rate "United Kingdom"))
+(Long/parseLong (first (get-vat-rate "United Kingdom")))
+(def ip-country-table
+  (json/read-str
+    (slurp "public/whois.json")
+    :key-fn keyword))
+(Long/parseLong (first (:decimal_lower_limit ip-country-table))))
+(Long/parseLong (:decimal_lower_limit (first ip-country-table)))

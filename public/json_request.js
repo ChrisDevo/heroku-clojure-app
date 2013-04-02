@@ -78,7 +78,7 @@ vat_request.onreadystatechange = function() {
         (vat_request.readyState === 4)) {
 
         console.log('Response: ' + vat_request.responseText);
-        vat_rate.innerHTML = 'Your vat rate is: ' +
+        vat_rate.innerHTML = 'Your VAT rate is: ' +
             vat_request.responseText + ' percent';
 
     }

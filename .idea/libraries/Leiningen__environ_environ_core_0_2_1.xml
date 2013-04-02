@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="Leiningen: environ:environ.core:0.2.1">
+    <CLASSES>
+      <root url="jar://$MAVEN_REPOSITORY$/environ/environ.core/0.2.1/environ.core-0.2.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>

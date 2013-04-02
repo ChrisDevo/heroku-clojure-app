@@ -10,11 +10,13 @@
                  [ring-basic-authentication "1.0.1"]
                  [environ "0.2.1"]
                  [com.cemerick/drawbridge "0.0.6"]
-                 [org.clojure/data.json "0.2.1"]]
+                 [org.clojure/data.json "0.2.1"]
+                 [org.clojure/tools.logging "0.2.6"]]
   :min-lein-version "2.0.0"
   :plugins [[environ/environ.lein "0.2.1"]
             [lein-ring "0.8.2"]]
   :hooks [environ.leiningen.hooks]
   :ring {:handler heroku-clojure-app.web/app}
   :profiles {:production {:env {:production true}}
-             :dev {:dependencies [[ring-mock "0.1.3"]]}})
+             :dev {:dependencies [[ring-mock "0.1.3"]
+                                  [midje "1.5.0"]]}})

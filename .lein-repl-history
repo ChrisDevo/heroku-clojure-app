@@ -471,3 +471,25 @@ ip-string
     :key-fn keyword))
 (Long/parseLong (first (:decimal_lower_limit ip-country-table))))
 (Long/parseLong (:decimal_lower_limit (first ip-country-table)))
+(defn what-is-my-vat-rate [request]
+  "Takes an http request. Returns the :vat_rate value (as a json string) from
+  the country-vat-table map specified by the country value of the corresponding
+  map."
+;  (json/write-str (Long/parseLong (first (get-vat-rate (first (get-country ip-in-range?
+;              (ip-to-decimal
+;                (ip-to-long
+;                  (ip-to-vector
+;
+                   (let [ip (->> "194.106.137.50"
+                              ip-to-vector
+                              ip-to-long
+                              ip-to-decimal)]
+                    (println ip)
+                      (->> ip
+                         (get-country ip-in-range?)
+                         first
+                         get-vat-rate
+                         first
+                         Long/parseLong
+                         json/write-str)
+                      ))

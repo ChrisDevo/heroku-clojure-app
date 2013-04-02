@@ -57,7 +57,7 @@
       (+ decimal-sum
         (* 256 ip-segment))) ip-longs))
 
-(defn get-country [ip-in-range? ip]
+(defn get-country [ip ip-in-range?]
   "Takes a predicate that finds a map in the ip-country-table with the IP in
   its range. Returns the value using the :country key found in the same map."
   (map :country (filter #(ip-in-range? % ip) ip-country-table)))
@@ -76,37 +76,40 @@
 (defn what-is-my-decimal-ip [request]
   "Takes an http request. Returns the decimal equivalent of the IP address found
   in the http header as a json string."
-  (json/write-str
-    (ip-to-decimal
-      (ip-to-long
-        (ip-to-vector
-          (get-ip request))))))
+  (-> request
+      get-ip
+      ip-to-vector
+      ip-to-long
+      ip-to-decimal
+      json/write-str))
 
 (defn what-is-my-country [request]
   "Takes an http request. Returns the :country value (as a json string) from an
   ip-country-table map that contains the IP address found in the http header."
-  (json/write-str
-    (first
-      (get-country ip-in-range?
-        (ip-to-decimal
-          (ip-to-long
-            (ip-to-vector
-              (get-ip request))))))))
+  (-> request
+      get-ip
+      ip-to-vector
+      ip-to-long
+      ip-to-decimal
+      (get-country ip-in-range?)
+      first
+      json/write-str))
 
 (defn what-is-my-vat-rate [request]
   "Takes an http request. Returns the :vat_rate value (as a json string) from
   the country-vat-table map specified by the country value of the corresponding
   map."
-  (json/write-str
-    (Long/parseLong
-      (first
-        (get-vat-rate
-          (first
-            (get-country ip-in-range?
-              (ip-to-decimal
-                (ip-to-long
-                  (ip-to-vector
-                    (get-ip request)))))))))))
+  (-> request
+    get-ip
+    ip-to-vector
+    ip-to-long
+    ip-to-decimal
+    (get-country ip-in-range?)
+    first
+    get-vat-rate
+    first
+    Long/parseLong
+    json/write-str))
 
 (def ^:private drawbridge
   (-> (drawbridge/ring-handler)

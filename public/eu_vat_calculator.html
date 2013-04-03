@@ -6,7 +6,7 @@
 <body>
     <div id="client_ip">Your ip is: </div>
     <div id="decimal_ip">Calculating decimal ip...</div>
-    <div id="country">Searching ip-country table...</div>
+    <div id="ip_country">Searching ip-country table...</div>
     <form id="calulate_vat" action="/calculatetotal" method="post">
         <p>Choose billing address country:
         <select name="billing_country">
@@ -43,11 +43,11 @@
 
         <p> Credit card number:
             <input type="text" name="bank_id_number" pattern="\d{6}"
-                   title="First 6 digits only please"/></p>
+                   title="First 6 digits only please"/>(first 6 digits only)</p>
 
-        <p> Enter sales total (in Euros):
+        <p> Enter sales total:
             <input type="text" name="sales_total" pattern="^(\d*\.\d{1,2}|\d+)$"
-                   title="Example: 123.45 or 123 "></p>
+                   title="Example: 123.45 or 123 ">(in Euros)</p>
 
         <p> <input type="submit" name="calculate_total"
                    value="Calculate total"/></p>

@@ -35,7 +35,7 @@
   (or ((:headers request) "x-forwarded-for")
     (:remote-addr request)))
 
-(defn my-ip-is [request]
+(defn your-ip-is [request]
   "Takes the http request and passes it to the get-ip function. Returns a string
   representing the client's IP address."
   (get-ip request))
@@ -78,7 +78,7 @@
   (and (<= (Long/parseLong (:decimal_lower_limit ip-country-map)) decimal-ip)
     (<= decimal-ip (Long/parseLong (:decimal_upper_limit ip-country-map)))))
 
-(defn my-decimal-ip-is [request]
+(defn your-decimal-ip-is [request]
   "Takes an http request. Returns the decimal equivalent of the IP address found
   in the http header as a json string."
   (-> request
@@ -88,7 +88,7 @@
       ip-to-decimal
       json/write-str))
 
-(defn my-country-is [request]
+(defn your-country-is [request]
   "Takes an http request. Returns the :country value (as a json string) from an
   ip-country-table map that contains the IP address found in the http header."
   (-> request
@@ -96,11 +96,11 @@
       ip-to-vector
       ip-to-long
       ip-to-decimal
-;    3261761842 ;hard-coded value for testing on localhost
+;   (-> 3261761842 ;hard-coded value for testing on localhost
       (get-country ip-in-range?)
       json/write-str))
 
-(defn my-vat-rate-is [request]
+(defn your-vat-rate-is [request]
   "Takes an http request. Returns the :vat_rate value (as a json string) from
   the country-vat-table map specified by the country value of the corresponding
   map."
@@ -109,7 +109,7 @@
       ip-to-vector
       ip-to-long
       ip-to-decimal
-;    3261761842 ;hard-coded value for testing on localhost
+;   (-> 3261761842 ;hard-coded value for testing on localhost
       (get-country ip-in-range?)
       get-vat-rate
       json/write-str))
@@ -132,13 +132,13 @@
      :headers {"Content-Type" "text/plain"}
      :body (pr-str (first ip-country-table))})
   (GET "/whatsmyip" [request]
-    my-ip-is)
+    your-ip-is)
   (GET "/whatsmydecimalip" [request]
-    my-decimal-ip-is)
+    your-decimal-ip-is)
   (GET "/whatsmycountry" [request]
-    my-country-is)
+    your-country-is)
   (GET "/whatsmyvatrate" [request]
-    my-vat-rate-is)
+    your-vat-rate-is)
   (POST "/calculatetotal" [request]
     your-total-is)
   (route/files "/" {:root "public"})

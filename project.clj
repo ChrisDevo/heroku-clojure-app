@@ -1,6 +1,10 @@
 (defproject heroku-clojure-app "1.0.0-SNAPSHOT"
-  :description "FIXME: write description"
-  :url "http://heroku-clojure-app.herokuapp.com"
+  :description "This app determines the applicable country to calculate
+                VAT based upon the client's IP address, the credit card Bank
+                Identifier Number (BIN) country, and the billing address country
+                chosen by the user. It then calculates a total (including VAT)
+                based upon a sales total entered by the user."
+  :url "http://whispering-inlet-2503.herokuapp.com"
   :license {:name "FIXME: choose"
             :url "http://example.com/FIXME"}
   :dependencies [[org.clojure/clojure "1.5.1"]

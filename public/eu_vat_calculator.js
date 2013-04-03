@@ -38,8 +38,9 @@ console.log('decimal_ip: ' + decimal_ip);
 }
 decimal_request.send();
 
-var country = document.getElementById('country');
+var country = document.getElementById('ip_country');
 var country_request = new XMLHttpRequest();
+var country_name = '';
 country_request.open('GET', 'whatsmycountry');
 country_request.onreadystatechange = function() {
 
@@ -47,8 +48,10 @@ country_request.onreadystatechange = function() {
         (country_request.readyState === 4)) {
 
         console.log('Response: ' + country_request.responseText);
+        country_name = country_request.responseText.replace(/\"/g, "");
+
         country.innerHTML = 'Your IP address is allocated to: '
-            + country_request.responseText.replace(/\"/g, "");
+            + country_name;
 
     }
 
@@ -64,8 +67,8 @@ vat_request.onreadystatechange = function() {
         (vat_request.readyState === 4)) {
 
         console.log('Response: ' + vat_request.responseText);
-        vat_rate.innerHTML = 'Your VAT rate is: ' +
-            vat_request.responseText + ' percent';
+        vat_rate.innerHTML = 'Your VAT rate in ' + country_name + ' is ' +
+            vat_request.responseText + ' percent.';
 
     }
 

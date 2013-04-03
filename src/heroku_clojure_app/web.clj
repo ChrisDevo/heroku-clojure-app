@@ -91,30 +91,28 @@
 (defn my-country-is [request]
   "Takes an http request. Returns the :country value (as a json string) from an
   ip-country-table map that contains the IP address found in the http header."
-  (->
-;    request
-;    get-ip
-;    ip-to-vector
-;    ip-to-long
-;    ip-to-decimal
-    3261761842 ;hard-coded value for testing on localhost
-    (get-country ip-in-range?)
-    json/write-str))
+  (-> request
+      get-ip
+      ip-to-vector
+      ip-to-long
+      ip-to-decimal
+;    3261761842 ;hard-coded value for testing on localhost
+      (get-country ip-in-range?)
+      json/write-str))
 
 (defn my-vat-rate-is [request]
   "Takes an http request. Returns the :vat_rate value (as a json string) from
   the country-vat-table map specified by the country value of the corresponding
   map."
-  (->
-;    request
-;    get-ip
-;    ip-to-vector
-;    ip-to-long
-;    ip-to-decimal
-    3261761842 ;hard-coded value for testing on localhost
-    (get-country ip-in-range?)
-    get-vat-rate
-    json/write-str))
+  (-> request
+      get-ip
+      ip-to-vector
+      ip-to-long
+      ip-to-decimal
+;    3261761842 ;hard-coded value for testing on localhost
+      (get-country ip-in-range?)
+      get-vat-rate
+      json/write-str))
 
 (defn your-total-is [request]
   (-> request

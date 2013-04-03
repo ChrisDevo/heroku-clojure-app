@@ -35,7 +35,7 @@
   (or ((:headers request) "x-forwarded-for")
     (:remote-addr request)))
 
-(defn what-is-my-ip [request]
+(defn my-ip-is [request]
   "Takes the http request and passes it to the get-ip function. Returns a string
   representing the client's IP address."
   (get-ip request))
@@ -54,18 +54,23 @@
   equivalent."
   (reduce
     (fn [ip-segment decimal-sum]
-      (+ decimal-sum
-        (* 256 ip-segment))) ip-longs))
+      (+ decimal-sum (* 256 ip-segment)))
+      ip-longs))
 
 (defn get-country [ip ip-in-range?]
   "Takes a predicate that finds a map in the ip-country-table with the IP in
   its range. Returns the value using the :country key found in the same map."
-  (map :country (filter #(ip-in-range? % ip) ip-country-table)))
+  (first
+    (map :country
+         (filter #(ip-in-range? % ip) ip-country-table))))
 
 (defn get-vat-rate [country]
   "Takes a country name. Returns the :vat_rate value in the map with a matching
   country from country-vat-table."
-  (map :vat_rate (filter #(= (:country %) country) country-vat-table)))
+  (Long/parseLong
+    (first
+      (map :vat_rate
+           (filter #(= (:country %) country) country-vat-table)))))
 
 (defn ip-in-range? [ip-country-map decimal-ip]
   "Takes a single map from ip-country-table and a decimal IP address. Returns
@@ -73,7 +78,7 @@
   (and (<= (Long/parseLong (:decimal_lower_limit ip-country-map)) decimal-ip)
     (<= decimal-ip (Long/parseLong (:decimal_upper_limit ip-country-map)))))
 
-(defn what-is-my-decimal-ip [request]
+(defn my-decimal-ip-is [request]
   "Takes an http request. Returns the decimal equivalent of the IP address found
   in the http header as a json string."
   (-> request
@@ -83,33 +88,38 @@
       ip-to-decimal
       json/write-str))
 
-(defn what-is-my-country [request]
+(defn my-country-is [request]
   "Takes an http request. Returns the :country value (as a json string) from an
   ip-country-table map that contains the IP address found in the http header."
-  (-> request
-      get-ip
-      ip-to-vector
-      ip-to-long
-      ip-to-decimal
-      (get-country ip-in-range?)
-      first
-      json/write-str))
+  (->
+;    request
+;    get-ip
+;    ip-to-vector
+;    ip-to-long
+;    ip-to-decimal
+    3261761842 ;hard-coded value for testing on localhost
+    (get-country ip-in-range?)
+    json/write-str))
 
-(defn what-is-my-vat-rate [request]
+(defn my-vat-rate-is [request]
   "Takes an http request. Returns the :vat_rate value (as a json string) from
   the country-vat-table map specified by the country value of the corresponding
   map."
-  (-> request
-    get-ip
-    ip-to-vector
-    ip-to-long
-    ip-to-decimal
+  (->
+;    request
+;    get-ip
+;    ip-to-vector
+;    ip-to-long
+;    ip-to-decimal
+    3261761842 ;hard-coded value for testing on localhost
     (get-country ip-in-range?)
-    first
     get-vat-rate
-    first
-    Long/parseLong
     json/write-str))
+
+(defn your-total-is [request]
+  (-> request
+      :params
+      str))
 
 (def ^:private drawbridge
   (-> (drawbridge/ring-handler)
@@ -124,13 +134,15 @@
      :headers {"Content-Type" "text/plain"}
      :body (pr-str (first ip-country-table))})
   (GET "/whatsmyip" [request]
-    what-is-my-ip)
+    my-ip-is)
   (GET "/whatsmydecimalip" [request]
-    what-is-my-decimal-ip)
+    my-decimal-ip-is)
   (GET "/whatsmycountry" [request]
-    what-is-my-country)
+    my-country-is)
   (GET "/whatsmyvatrate" [request]
-    what-is-my-vat-rate)
+    my-vat-rate-is)
+  (POST "/calculatetotal" [request]
+    your-total-is)
   (route/files "/" {:root "public"})
   (ANY "*" []
        (route/not-found (slurp (io/resource "404.html")))))

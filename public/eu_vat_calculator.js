@@ -15,21 +15,6 @@ ip_request.onreadystatechange = function() {
 
         ip = ip_request.responseText;
         client_ip.innerHTML = ('Your IP is: ' + ip);
-
-        ip_array = ip.split('.'); console.log(ip_array);
-
-        // convert each IP address segment to decimal
-        // bit shift operations must be converted to 32bit unsigned using '>>> 0'
-        ip_array[0] = (parseInt(ip_array[0]) << 24) >>> 0; console.log(ip_array[0]);
-        ip_array[1] = (parseInt(ip_array[1]) << 16) >>> 0; console.log(ip_array[1]);
-        ip_array[2] = (parseInt(ip_array[2]) << 8) >>> 0; console.log(ip_array[2]);
-        ip_array[3] = (parseInt(ip_array[3])) >>> 0; console.log(ip_array[3]);
-
-        for (var i = 0; i < ip_array.length; i++) {
-            decimal += ip_array[i];
-        }
-
-
     }
 
 }
@@ -62,7 +47,8 @@ country_request.onreadystatechange = function() {
         (country_request.readyState === 4)) {
 
         console.log('Response: ' + country_request.responseText);
-        country.innerHTML = 'Your country is: ' + country_request.responseText;
+        country.innerHTML = 'Your IP address is allocated to: '
+            + country_request.responseText.replace(/\"/g, "");
 
     }
 

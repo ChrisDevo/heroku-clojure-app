@@ -1,11 +1,19 @@
 [
     {
+        "country": "Austria",
+        "vat_rate": "20"
+    },
+    {
         "country": "Belgium",
         "vat_rate": "21"
     },
     {
         "country": "Bulgaria",
         "vat_rate": "20"
+    },
+    {
+        "country": "Cyprus",
+        "vat_rate": "18"
     },
     {
         "country": "Czech Republic",
@@ -16,24 +24,28 @@
         "vat_rate": "25"
     },
     {
-        "country": "Germany",
-        "vat_rate": "19"
-    },
-    {
         "country": "Estonia",
         "vat_rate": "20"
+    },
+    {
+        "country": "Finland",
+        "vat_rate": "24"
+    },
+    {
+        "country": "France",
+        "vat_rate": "19.6"
+    },
+    {
+        "country": "Germany",
+        "vat_rate": "19"
     },
     {
         "country": "Greece",
         "vat_rate": "23"
     },
     {
-        "country": "Spain",
-        "vat_rate": "21"
-    },
-    {
-        "country": "France",
-        "vat_rate": "19.6"
+        "country": "Hungary",
+        "vat_rate": "27"
     },
     {
         "country": "Ireland",
@@ -42,10 +54,6 @@
     {
         "country": "Italy",
         "vat_rate": "21"
-    },
-    {
-        "country": "Cyprus",
-        "vat_rate": "18"
     },
     {
         "country": "Latvia",
@@ -60,20 +68,12 @@
         "vat_rate": "15"
     },
     {
-        "country": "Hungary",
-        "vat_rate": "27"
-    },
-    {
         "country": "Malta",
         "vat_rate": "18"
     },
     {
         "country": "Netherlands",
         "vat_rate": "21"
-    },
-    {
-        "country": "Austria",
-        "vat_rate": "20"
     },
     {
         "country": "Poland",
@@ -88,16 +88,16 @@
         "vat_rate": "24"
     },
     {
-        "country": "Slovenia",
-        "vat_rate": "20"
-    },
-    {
         "country": "Slovakia",
         "vat_rate": "20"
     },
     {
-        "country": "Finland",
-        "vat_rate": "24"
+        "country": "Slovenia",
+        "vat_rate": "20"
+    },
+    {
+        "country": "Spain",
+        "vat_rate": "21"
     },
     {
         "country": "Sweden",

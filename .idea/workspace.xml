@@ -2,104 +2,20 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d13b28fe-68d1-41d8-885f-64246c9854dc" name="Default" comment="">
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__bultitude_bultitude_0_1_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__classlojure_classlojure_0_6_6.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__colorize_colorize_0_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__com_cemerick_pomegranate_0_0_13.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__gui_diff_gui_diff_0_3_9.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__leiningen_core_leiningen_core_2_0_0_preview10.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__midje_midje_1_5_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__ordered_ordered_1_2_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_maven_maven_aether_provider_3_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_maven_maven_model_3_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_maven_maven_model_builder_3_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_maven_maven_repository_metadata_3_0_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_maven_wagon_wagon_http_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_maven_wagon_wagon_http_shared4_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_apache_maven_wagon_wagon_provider_api_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_algo_monads_0_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_core_unify_0_5_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_math_combinatorics_0_0_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_tools_macro_0_1_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_clojure_tools_namespace_0_2_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_codehaus_plexus_plexus_classworlds_2_4.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_codehaus_plexus_plexus_component_annotations_1_5_5.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_codehaus_plexus_plexus_interpolation_1_14.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_codehaus_plexus_plexus_utils_2_0_7.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_jsoup_jsoup_1_6_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_sonatype_aether_aether_api_1_13_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_sonatype_aether_aether_connector_file_1_13_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_sonatype_aether_aether_connector_wagon_1_13_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_sonatype_aether_aether_impl_1_13_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_sonatype_aether_aether_spi_1_13_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_sonatype_aether_aether_util_1_13_1.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_sonatype_sisu_sisu_guice_3_0_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_sonatype_sisu_sisu_inject_bean_2_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__org_sonatype_sisu_sisu_inject_plexus_2_2_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__robert_hooke_1_1_2.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__slingshot_slingshot_0_10_3.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__swiss_arrows_swiss_arrows_0_1_0.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__useful_useful_0_8_3_alpha8.xml" />
-      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/.idea/libraries/Leiningen__utilize_utilize_0_2_3.xml" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__cheshire_cheshire_3_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__clj_http_clj_http_0_3_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__clj_stacktrace_clj_stacktrace_0_2_4.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__clj_time_clj_time_0_3_7.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__clout_clout_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__com_cemerick_drawbridge_0_0_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_codec_commons_codec_1_6.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_fileupload_commons_fileupload_1_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_io_commons_io_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__commons_logging_commons_logging_1_1_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__compojure_compojure_1_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__environ_environ_0_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__environ_environ_core_0_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__hiccup_hiccup_1_0_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__javax_servlet_servlet_api_2_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__joda_time_joda_time_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ns_tracker_ns_tracker_0_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpclient_4_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpcore_4_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_apache_httpcomponents_httpmime_4_1_2.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_clojure_clojure_1_5_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_clojure_core_incubator_0_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_clojure_data_codec_0_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_clojure_data_json_0_2_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_clojure_java_classpath_0_2_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_clojure_java_jdbc_0_2_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_clojure_tools_macro_0_1_0.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_clojure_tools_namespace_0_1_3.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_clojure_tools_nrepl_0_2_0_beta5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_core_asl_1_9_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_codehaus_jackson_jackson_smile_1_9_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_continuation_7_6_1_v20120215.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_http_7_6_1_v20120215.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_io_7_6_1_v20120215.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_server_7_6_1_v20120215.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_jetty_util_7_6_1_v20120215.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__org_eclipse_jetty_orbit_javax_servlet_2_5_0_v201103041518.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ring_basic_authentication_ring_basic_authentication_1_0_1.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ring_ring_1_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ring_ring_core_1_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ring_ring_devel_1_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ring_ring_jetty_adapter_1_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__ring_ring_servlet_1_1_5.xml" afterPath="" />
-      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Maven__slingshot_slingshot_0_10_2.xml" afterPath="" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.lein-repl-history" afterPath="$PROJECT_DIR$/.lein-repl-history" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/heroku-clojure-app.iml" afterPath="$PROJECT_DIR$/heroku-clojure-app.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/json_request.js" afterPath="$PROJECT_DIR$/public/json_request.js" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/misc.xml" afterPath="$PROJECT_DIR$/.idea/misc.xml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/public/eu_vat_calculator.html" />
+      <change type="DELETED" beforePath="$PROJECT_DIR$/public/json_request.html" afterPath="" />
+      <change type="MOVED" beforePath="$PROJECT_DIR$/public/json_request.js" afterPath="$PROJECT_DIR$/public/eu_vat_calculator.js" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/eu_vat_rates.json" afterPath="$PROJECT_DIR$/public/eu_vat_rates.json" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/test/heroku_clojure_app/web_test.clj" afterPath="$PROJECT_DIR$/test/heroku_clojure_app/web_test.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="whispering-inlet-2503.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364889995733" ignored="false" />
+    <file path="/Dummy.txt" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364998250343" ignored="false" />
     <file path="/whatsmyip.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364564548480" ignored="false" />
     <file path="/youripis.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364226849705" ignored="false" />
-    <file path="/web.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364919682844" ignored="false" />
+    <file path="/web.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365000789913" ignored="false" />
     <file path="/404.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363689955031" ignored="false" />
     <file path="/fragment.java" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363706529306" ignored="false" />
     <file path="$USER_HOME$/compojure-demo/src/compojure_demo/handler.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363706983793" ignored="false" />
@@ -108,13 +24,14 @@
     <file path="$USER_HOME$/compojure-demo/pom.xml" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363706403682" ignored="false" />
     <file path="/project.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364560344186" ignored="false" />
     <file path="$USER_HOME$/heroku-clojure-postgres/project.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363861105438" ignored="false" />
-    <file path="/json_request.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364912766443" ignored="false" />
-    <file path="/json_request.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364913455828" ignored="false" />
+    <file path="/json_request.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364997158238" ignored="false" />
+    <file path="/json_request.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364987696465" ignored="false" />
     <file path="/whatsmyip.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364564241534" ignored="false" />
     <file path="/whatsmydecimalip.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364564454875" ignored="false" />
     <file path="/whatsmydecimalip.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364563894578" ignored="false" />
     <file path="/a.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364564060855" ignored="false" />
     <file path="/web_test.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364916262087" ignored="false" />
+    <file path="/eu_vat_calculator.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365000857193" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -174,35 +91,26 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="json_request.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/json_request.js">
+      <file leaf-file-name="eu_vat_calculator.js" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="80" column="38" selection-start="2451" selection-end="2451" vertical-scroll-proportion="0.0">
+            <state line="50" column="53" selection-start="1459" selection-end="1459" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="whatsmydecimalip.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/whatsmydecimalip.html">
+      <file leaf-file-name="eu_vat_calculator.html" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="7" column="31" selection-start="157" selection-end="157" vertical-scroll-proportion="-4.375">
+            <state line="11" column="29" selection-start="380" selection-end="380" vertical-scroll-proportion="0.1513158">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="youripis.js" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/youripis.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="6" column="1" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="README.md" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/README.md">
+      <file leaf-file-name="eu_vat_rates.json" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/eu_vat_rates.json">
           <provider selected="true" editor-type-id="text-editor">
             <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
               <folding />
@@ -210,28 +118,10 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="json_request.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/json_request.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="9" column="59" selection-start="282" selection-end="282" vertical-scroll-proportion="-5.625">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="project.clj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/project.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="21" column="53" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.clj" pinned="false" current="true" current-in-tab="true">
+      <file leaf-file-name="web.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="69" column="18" selection-start="2609" selection-end="2609" vertical-scroll-proportion="0.9607843">
+            <state line="120" column="6" selection-start="4103" selection-end="4103" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -264,11 +154,12 @@
         <option value="$PROJECT_DIR$/public/whatsmyip.js" />
         <option value="$PROJECT_DIR$/public/whatsmydecimalip.js" />
         <option value="$PROJECT_DIR$/public/whatsmyip.html" />
-        <option value="$PROJECT_DIR$/public/json_request.html" />
-        <option value="$PROJECT_DIR$/public/json_request.js" />
         <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/test/heroku_clojure_app/web_test.clj" />
+        <option value="$PROJECT_DIR$/public/json_request.js" />
+        <option value="$PROJECT_DIR$/public/json_request.html" />
         <option value="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
+        <option value="$PROJECT_DIR$/public/eu_vat_calculator.html" />
       </list>
     </option>
   </component>
@@ -280,8 +171,8 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="49" />
-    <option name="y" value="50" />
+    <option name="x" value="50" />
+    <option name="y" value="52" />
     <option name="width" value="696" />
     <option name="height" value="994" />
   </component>
@@ -311,8 +202,6 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
-      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -379,20 +268,22 @@
           </PATH>
         </subPane>
       </pane>
+      <pane id="PackagesPane" />
+      <pane id="Scope" />
     </panes>
   </component>
   <component name="PropertiesComponent">
     <property name="GoToFile.includeJavaFiles" value="false" />
-    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="editor.preferences.tabs" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/project.clj" />
-    <property name="MemberChooser.showClasses" value="true" />
-    <property name="GoToClass.includeLibraries" value="false" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
+    <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="MemberChooser.showClasses" value="true" />
+    <property name="GoToClass.includeLibraries" value="false" />
     <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
   </component>
@@ -580,7 +471,7 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="49" y="50" width="696" height="994" extended-state="0" />
+    <frame x="50" y="52" width="696" height="994" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
@@ -592,17 +483,17 @@
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="-1" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24763107" sideWeight="0.6703418" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.24691358" sideWeight="0.6703418" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -667,51 +558,24 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/public/whatsmyip.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="38" selection-start="15" selection-end="38" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/whatsmyip.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="45" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="6" column="45" selection-start="110" selection-end="110" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/README.md">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/json_request.html">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="9" column="59" selection-start="282" selection-end="282" vertical-scroll-proportion="-5.625">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.5.1/clojure-1.5.1.jar!/clojure/core.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="1544" column="10" selection-start="47093" selection-end="47093" vertical-scroll-proportion="0.33294663">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/youripis.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="6" column="1" selection-start="231" selection-end="231" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -737,18 +601,9 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/json_request.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="80" column="38" selection-start="2451" selection-end="2451" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/public/whatsmydecimalip.html">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="31" selection-start="157" selection-end="157" vertical-scroll-proportion="-4.375">
-          <folding />
-        </state>
+        <state line="7" column="31" selection-start="157" selection-end="157" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/test/heroku_clojure_app/web_test.clj">
@@ -767,14 +622,38 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/project.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="21" column="53" selection-start="968" selection-end="968" vertical-scroll-proportion="0.0">
+        <state line="21" column="53" selection-start="968" selection-end="968" vertical-scroll-proportion="0.38135594" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/youripis.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="6" column="1" selection-start="231" selection-end="231" vertical-scroll-proportion="0.11070111" />
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/eu_vat_rates.json">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="69" column="18" selection-start="2609" selection-end="2609" vertical-scroll-proportion="0.9607843">
+        <state line="120" column="6" selection-start="4103" selection-end="4103" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="50" column="53" selection-start="1459" selection-end="1459" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="29" selection-start="380" selection-end="380" vertical-scroll-proportion="0.1513158">
           <folding />
         </state>
       </provider>

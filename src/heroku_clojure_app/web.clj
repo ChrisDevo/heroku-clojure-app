@@ -30,26 +30,26 @@
     (slurp "public/eu_vat_rates.json")
     :key-fn keyword))
 
-(defn get-ip [request]
+(defn- get-ip [request]
   "Takes an http request. Returns the IP address found in the header."
   (or ((:headers request) "x-forwarded-for")
     (:remote-addr request)))
 
-(defn your-ip-is [request]
+(defn- your-ip-is [request]
   "Takes the http request and passes it to the get-ip function. Returns a string
   representing the client's IP address."
   (get-ip request))
 
-(defn ip-to-vector [ip-string]
+(defn- ip-to-vector [ip-string]
   "Takes a string representation of an IP address. Returns a vector of strings."
     (string/split ip-string #"\."))
 
-(defn ip-to-long [ip-vector]
+(defn- ip-to-long [ip-vector]
   "Takes an IP address vector. Returns a vector with the values converted to
   Long"
   (map #(Long/parseLong %) ip-vector))
 
-(defn ip-to-decimal [ip-longs]
+(defn- ip-to-decimal [ip-longs]
   "Takes an IP address vector consisting of Long values. Returns the decimal
   equivalent."
   (reduce
@@ -57,28 +57,64 @@
       (+ decimal-sum (* 256 ip-segment)))
       ip-longs))
 
-(defn get-country [ip ip-in-range?]
+(defn- get-country-from-ip [ip ip-in-range?]
   "Takes a predicate that finds a map in the ip-country-table with the IP in
   its range. Returns the value using the :country key found in the same map."
   (first
     (map :country
          (filter #(ip-in-range? % ip) ip-country-table))))
 
-(defn get-vat-rate [country]
+(defn- get-country-from-bank-id [request]
+  "Takes an http request and extracts the value of :bank_id_number. It then
+  returns an arbitrary country (as a string) from country-vat-table using the
+  remainder of the bank ID number (BIN) divided by the number of EU countries
+  (27).
+
+  To be fully-functional this should match valid BINs against a current BIN
+  database."
+  (-> request
+      :params
+      :bank_id_number
+      Long/parseLong
+      (mod 27)
+      country-vat-table
+      :country
+      str)
+  )
+
+(defn- get-billing-country [request]
+  "Takes an http request and extracts the value of :billing_country. Returns
+  the name of the country as a string."
+  (-> request
+    :params
+    :billing_country
+    str)
+  )
+
+(defn- get-vat-rate [country]
   "Takes a country name. Returns the :vat_rate value in the map with a matching
   country from country-vat-table."
-  (Long/parseLong
+  (Double/parseDouble
     (first
       (map :vat_rate
            (filter #(= (:country %) country) country-vat-table)))))
 
-(defn ip-in-range? [ip-country-map decimal-ip]
+(defn- get-sales-total [request]
+  "Takes an http request and extracts the value of :sales_total. Returns it as
+  a Double."
+  (-> request
+      :params
+      :sales_total
+      Double/parseDouble)
+  )
+
+(defn- ip-in-range? [ip-country-map decimal-ip]
   "Takes a single map from ip-country-table and a decimal IP address. Returns
   the map that contains that decimal IP address within its range."
   (and (<= (Long/parseLong (:decimal_lower_limit ip-country-map)) decimal-ip)
     (<= decimal-ip (Long/parseLong (:decimal_upper_limit ip-country-map)))))
 
-(defn your-decimal-ip-is [request]
+(defn- your-decimal-ip-is [request]
   "Takes an http request. Returns the decimal equivalent of the IP address found
   in the http header as a json string."
   (-> request
@@ -88,7 +124,7 @@
       ip-to-decimal
       json/write-str))
 
-(defn your-country-is [request]
+(defn- your-country-is [request]
   "Takes an http request. Returns the :country value (as a json string) from an
   ip-country-table map that contains the IP address found in the http header."
   (-> request
@@ -97,26 +133,32 @@
       ip-to-long
       ip-to-decimal
 ;   (-> 3261761842 ;hard-coded value for testing on localhost
-      (get-country ip-in-range?)
-      json/write-str))
+      (get-country-from-ip ip-in-range?)
+      str))
 
-(defn your-vat-rate-is [request]
+(defn- your-vat-rate-is [request]
   "Takes an http request. Returns the :vat_rate value (as a json string) from
   the country-vat-table map specified by the country value of the corresponding
   map."
   (-> request
-      get-ip
-      ip-to-vector
-      ip-to-long
-      ip-to-decimal
+      your-country-is
 ;   (-> 3261761842 ;hard-coded value for testing on localhost
-      (get-country ip-in-range?)
+      (get-country-from-ip ip-in-range?)
       get-vat-rate
-      json/write-str))
+      str))
 
-(defn your-total-is [request]
+(defn- your-total-is [request]
+  "Takes an http request and returns the sales total (including appropriate
+  VAT) based upon which country-choosing function is used. Which method used
+  can be handled here (with another function taking all three country values)
+  or on the client-side (passing a single country in the http request)."
   (-> request
-      :params
+;      your-country-is
+;      get-billing-country;
+      get-country-from-bank-id;
+      get-vat-rate
+      (/ 100.0)
+      (* (get-sales-total request))
       str))
 
 (def ^:private drawbridge

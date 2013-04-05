@@ -4,14 +4,18 @@
     <title>EU VAT Calculator</title>
 </head>
 <body>
-    <div id="client_ip">Your ip is: </div>
-    <div id="decimal_ip">Calculating decimal ip...</div>
-    <div id="ip_country">Searching ip-country table...</div>
-    <form id="calculate_vat" method="post" action="/calculatetotal">
+    <form name="vat_form" id="vat_form" method="post" action="/calculatetotal">
+
+        <div id="client_ip">Your ip is: </div>
+        <div id="decimal_ip">Calculating decimal ip...</div>
+        <div id="ip_country">Searching ip-country table...</div>
+        <input id="submitted_ip_country" type="hidden" name="ip_country"
+               value="" required/>
 
         <p>Choose billing address country:
             <select name="billing_country">
-                <option value="" disabled selected>Billing address country</option>
+                <option value="" disabled selected>Billing address country
+                    </option>
                 <option value="Austria">Austria</option>
                 <option value="Belgium">Belgium</option>
                 <option value="Bulgaria">Bulgaria</option>
@@ -44,20 +48,28 @@
         </p>
 
         <p> Credit card number:
-            <input type="text" name="bank_id_number" pattern="\d{6}"
-                   title="First 6 digits only please"/>(first 6 digits only)
+            <input type="text" name="bank_id_number" pattern="\d{6}" value=""
+                   title="First 6 digits only please" onblur="validateBankID()"
+                   required/>
+            (first 6 digits only)
         </p>
 
-        <div id='bank_country'>Searching bank-identifier-number-table...</div>
+        <input id='bank_country' type="hidden" name="bank_country" value="">
+
+        <div id='bank_id_country'>Waiting for valid bank id...</div>
+
         <p> Enter sales total:
             <input type="text" name="sales_total" pattern="^(\d*\.\d{1,2}|\d+)$"
-                   title="Example: 123.45 or 123 ">(in Euros)
+                   title="Example: 123.45 or 123 " required>
+            (in Euros)
         </p>
 
-        <p id='error_message'></p>
+        <input id='vat_rate' type='hidden' name='vat_rate' value=''>
+
+        <div id="vat_rate_displayed">Searching country-vat table...</div>
+
     </form>
-    <p> <button form="calculate_vat">Calculate total</button> </p>
-    <div id="vat_rate">Searching country-vat table...</div>
+    <p> <button form="vat_form">Calculate total</button> </p>
     <div id='sales_total'></div>
     <script src="eu_vat_calculator.js"></script>
 </body>

@@ -1,4 +1,4 @@
-# heroku-clojure-app
+# heroku-clojure-app (EU VAT Calculator)
 
 A [Heroku](http://www.heroku.com) web app using Compojure.
 
@@ -6,8 +6,17 @@ This generated project has a few basics set up beyond the bare Compojure default
 
 * Cookie-backed session store
 * Stack traces when in development
-* Environment-based config via [enviorn](https://github.com/weavejester/environ)
+* Environment-based config via [environ](https://github.com/weavejester/environ)
 * [HTTP-based REPL debugging](https://devcenter.heroku.com/articles/debugging-clojure) via [drawbridge](https://github.com/cemerick/drawbridge)
+
+## Project Description
+
+* The goal of this project is to calculate the appropriate VAT depending on
+which country is chosen to return the VAT rate.
+* This project is hosted on [Heroku](http://whispering-inlet-2503.herokuapp.com/eu_vat_calculator.html)
+* It is built using Clojure, JavaScript and HTML.
+* The main executable is web.clj found in the src folder.
+* The data files (json), Javascript, and HTML files are found in the public folder.
 
 ## Usage
 
@@ -17,62 +26,16 @@ launch from the command line:
 
     $ lein run -m heroku-clojure-app.web
 
-Initialize a git repository for your project.
+    or
 
-    $ git init
-    $ git add .
-    $ git commit -m "Initial commit."
+    $ lein ring server
 
-You'll need the [heroku toolbelt](https://toolbelt.herokuapp.com)
-installed to manage the heroku side of your app. Once it's installed,
-get the app created:
+    or, using foreman from the Heroku Toolbelt
 
-    $ heroku apps:create heroku-clojure-app
-    Creating heroku-clojure-app... done, stack is cedar
-    http://heroku-clojure-app.herokuapp.com/ | git@heroku.com:heroku-clojure-app.git
-    Git remote heroku added
+    $ foreman start
 
-You can deploy the skeleton project immediately:
+Mostly I use `lein ring server` to test locally.
 
-    $ git push heroku master
-    Writing objects: 100% (13/13), 2.87 KiB, done.
-    Total 13 (delta 0), reused 0 (delta 0)
-
-    -----> Heroku receiving push
-    -----> Clojure app detected
-    -----> Installing Leiningen
-           Downloading: leiningen-2.0.0-preview7-standalone.jar
-    [...]
-    -----> Launching... done, v3
-           http://heroku-clojure-app.herokuapp.com deployed to Heroku
-
-    To git@heroku.com:heroku-clojure-app.git
-     * [new branch]      master -> master
-
-It's live! Hit it with `curl`:
-
-    $ curl http://heroku-clojure-app.herokuap.com
-    ["Hello" :from Heroku]
-
-The cookie-backed session store needs a session secret configured for encryption:
-
-    $ heroku config:add SESSION_SECRET=$RANDOM_16_CHARS
-
-## Remote REPL
-
-The [devcenter article](https://devcenter.heroku.com/articles/debugging-clojure)
-has a detailed explanation, but using the `repl` task from Leiningen
-2.x lets you connect a REPL to a remote process over HTTP. The first
-step is setting up credentials:
-
-    $ heroku config:add REPL_USER=[...] REPL_PASSWORD=[...]
-
-Then you can launch the REPL:
-
-    $ lein repl :connect http://$REPL_USER:$REPL_PASSWORD@myapp.herokuapp.com/repl
-
-Everything you enter will be evaluated remotely in the running dyno,
-which can be very useful for debugging or inspecting live data.
 
 ## License
 

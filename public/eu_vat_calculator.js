@@ -70,7 +70,6 @@ function validateBankID() {
             bank_country_displayed.innerHTML = 'Your bank country is: '
                 + bank_country;
 
-            request_vat(bank_country);
         }
     };
     bank_id_request.send();
@@ -114,7 +113,7 @@ var vat_multiplier = 0;
 function request_vat(country) {
 
         // get vate rate using chosen country
-        vat_request.open('POST', vat_query + country);
+        vat_request.open('POST', vat_query + country, false);
         vat_request.setRequestHeader("Content-type", "text/plain")
         vat_request.onreadystatechange = function() {
 
@@ -143,8 +142,28 @@ var sales_total_field = document.getElementById('sales_total');
 var vat_total = 0;
 var vat_total_displayed = document.getElementById('vat_total_displayed');
 var vat_total_submitted = document.getElementById('vat_total');
+var vat_country = '';
 
 function calculateTotal() {
+
+    billing_country = vat_form.billing_country.value;
+
+    console.log('IP country: ' + ip_country);
+    console.log('Billing country: ' + billing_country);
+    console.log('Bank country: ' + bank_country);
+
+    if (ip_country != billing_country) {
+        vat_country = bank_country;
+    } else {
+        vat_country = ip_country;
+    }
+
+    console.log('VAT country: ' + vat_country);
+    request_vat(vat_country);
+
+    console.log('VAT rate: ' + vat_rate);
+    console.log('VAT rate multiplier: ' + vat_multiplier);
+
     sales_total = vat_form.sales_total.value;
     vat_total = sales_total * vat_multiplier;
     vat_total_displayed.innerHTML = ('Your total (including VAT @ ' + vat_rate +

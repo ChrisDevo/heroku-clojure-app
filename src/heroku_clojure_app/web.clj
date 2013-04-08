@@ -97,6 +97,13 @@
       :country
       str))
 
+(defn- get-ip-country [request]
+  "Takes an http request and extracts the value of :ip_country. Returns
+   the name of the country as a string."
+  (-> request
+    (get-param-value :ip_country)
+    str))
+
 (defn- get-bank-country [request]
   "Takes an http request and extracts the value of :bank_country. Returns
    the name of the country as a string."
@@ -110,6 +117,15 @@
   (-> request
       (get-param-value :billing_country)
       str))
+
+(defn- get-vat-country [request]
+  "Takes an http request containing country parameters (:ip_country,
+  :billing_country, and :bank_country). Compares the country values and chooses
+  the applicable country for determining the VAT rate."
+  (if (not= (get-ip-country request)
+         (get-billing-country request))
+      (get-bank-country request)
+      (get-ip-country request)))
 
 (defn- get-vat-rate [country]
   "Takes a country name. Returns the :vat_rate value in the map with a matching
@@ -139,12 +155,12 @@
 (defn- your-ip-country-is [request]
   "Takes an http request. Returns the :country value (as a string) from an
   ip-country-table map that contains the IP address found in the http header."
-  (-> request
-      get-ip
-      ip->vector
-      ip->long
-      ip->decimal
-;  (-> 3261761842 ;hard-coded value for testing on localhost
+;  (-> request
+;      get-ip
+;      ip->vector
+;      ip->long
+;      ip->decimal
+  (-> 3261761842 ;hard-coded value for testing on localhost
       get-country-from-ip
       str))
 
@@ -180,14 +196,14 @@
   VAT) based upon which country-choosing function is used. Which method used
   can be handled here (with another function taking all three country values)
   or on the client-side (passing a single country in the http request)."
-  (format "€%.2f" (-> request
-;                      your-ip-country-is
-;                      get-billing-country
-                      get-bank-country
-                      get-vat-rate
-                      (/ 100.0)
-                      (+ 1)
-                      (* (get-sales-total request)))))
+;  (format "€%.2f"
+    (-> request
+        get-vat-country
+        get-vat-rate
+        (/ 100.0)
+        (+ 1)
+        (* (get-sales-total request))
+        str))
 
 (def ^:private drawbridge
   (-> (drawbridge/ring-handler)

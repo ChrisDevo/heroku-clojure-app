@@ -8,7 +8,7 @@
 
         <div id="client_ip">Your ip is: </div>
         <div id="decimal_ip">Calculating decimal ip...</div>
-        <div id="ip_country">Searching ip-country table...</div>
+        <div id="ip_country" value="">Searching ip-country table...</div>
         <input id="submitted_ip_country" type="hidden" name="ip_country"
                value="" required/>
 
@@ -65,6 +65,8 @@
             (in Euros)
         </p>
 
+        <!--<input id='vat_country' type='hidden' name='vat_country' value=''>-->
+
         <input id='vat_rate' type='hidden' name='vat_rate' value=''>
 
         <div id="vat_rate_displayed">Searching country-vat table...</div>
@@ -73,7 +75,7 @@
 
         <div id='vat_total_displayed'>Calculating total...</div>
     </form>
-    <!--<p> <button form="vat_form">Calculate total</button> </p>-->
+    <p> <button form="vat_form">Calculate total</button> </p>
     <script src="eu_vat_calculator.js"></script>
 </body>
 </html>

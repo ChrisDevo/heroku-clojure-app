@@ -60,7 +60,8 @@
 
         <p> Enter sales total:
             <input type="text" name="sales_total" pattern="^(\d*\.\d{1,2}|\d+)$"
-                   title="Example: 123.45 or 123 " required>
+                   title="Example: 123.45 or 123 " onblur="calculateTotal()"
+                   required>
             (in Euros)
         </p>
 
@@ -68,9 +69,11 @@
 
         <div id="vat_rate_displayed">Searching country-vat table...</div>
 
+        <input id='vat_total' type=hidden name='vat_total' value=''>
+
+        <div id='vat_total_displayed'>Calculating total...</div>
     </form>
-    <p> <button form="vat_form">Calculate total</button> </p>
-    <div id='sales_total'></div>
+    <!--<p> <button form="vat_form">Calculate total</button> </p>-->
     <script src="eu_vat_calculator.js"></script>
 </body>
 </html>

@@ -55,7 +55,7 @@
   (reduce
     (fn [ip-segment decimal-sum]
       (+ decimal-sum (* 256 ip-segment)))
-      ip-longs))
+    ip-longs))
 
 (defn- ip-in-range? [ip-country-map decimal-ip]
   "Takes a decimal IP address. Returns the map that contains that decimal IP
@@ -92,7 +92,7 @@
   To be fully-functional this should match valid BINs against a current BIN
   database."
   (-> bank-id
-      (mod 27)
+      (mod 27) ; TODO replace this with a function that returns bank country from BIN database
       country-vat-table
       :country
       str))
@@ -144,7 +144,7 @@
       ip->vector
       ip->long
       ip->decimal
-;      3261761842 ;hard-coded value for testing on localhost
+;  (-> 3261761842 ;hard-coded value for testing on localhost
       get-country-from-ip
       str))
 
@@ -180,15 +180,14 @@
   VAT) based upon which country-choosing function is used. Which method used
   can be handled here (with another function taking all three country values)
   or on the client-side (passing a single country in the http request)."
-  (-> request
-;      your-ip-country-is
-;      get-billing-country
-      get-bank-country
-      get-vat-rate
-      (/ 100.0)
-      (+ 1)
-      (* (get-sales-total request))
-      str))
+  (format "€%.2f" (-> request
+;                      your-ip-country-is
+;                      get-billing-country
+                      get-bank-country
+                      get-vat-rate
+                      (/ 100.0)
+                      (+ 1)
+                      (* (get-sales-total request)))))
 
 (def ^:private drawbridge
   (-> (drawbridge/ring-handler)

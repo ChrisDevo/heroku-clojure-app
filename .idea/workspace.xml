@@ -2,9 +2,8 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d13b28fe-68d1-41d8-885f-64246c9854dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/eu_vat_calculator.html" afterPath="$PROJECT_DIR$/public/eu_vat_calculator.html" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/eu_vat_calculator.js" afterPath="$PROJECT_DIR$/public/eu_vat_calculator.js" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="whispering-inlet-2503.iws" />
     <ignored path=".idea/workspace.xml" />
@@ -99,7 +98,7 @@
       <file leaf-file-name="eu_vat_calculator.js" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.js">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="125" column="42" selection-start="4048" selection-end="4048" vertical-scroll-proportion="2.1258504">
+            <state line="91" column="53" selection-start="2862" selection-end="2862" vertical-scroll-proportion="1.5476191">
               <folding />
             </state>
           </provider>
@@ -108,7 +107,7 @@
       <file leaf-file-name="web.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="127" column="21" selection-start="4531" selection-end="4531" vertical-scroll-proportion="0.0">
+            <state line="157" column="13" selection-start="5461" selection-end="5524" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -155,8 +154,8 @@
         <option value="$PROJECT_DIR$/project.clj" />
         <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/public/eu_vat_calculator.html" />
-        <option value="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
         <option value="$PROJECT_DIR$/public/eu_vat_calculator.js" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
       </list>
     </option>
   </component>
@@ -609,14 +608,14 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="127" column="21" selection-start="4531" selection-end="4531" vertical-scroll-proportion="0.0">
+        <state line="157" column="13" selection-start="5461" selection-end="5524" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="125" column="42" selection-start="4048" selection-end="4048" vertical-scroll-proportion="2.1258504">
+        <state line="91" column="53" selection-start="2862" selection-end="2862" vertical-scroll-proportion="1.5476191">
           <folding />
         </state>
       </provider>

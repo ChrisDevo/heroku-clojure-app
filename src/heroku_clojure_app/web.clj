@@ -155,12 +155,12 @@
 (defn- your-ip-country-is [request]
   "Takes an http request. Returns the :country value (as a string) from an
   ip-country-table map that contains the IP address found in the http header."
-;  (-> request
-;      get-ip
-;      ip->vector
-;      ip->long
-;      ip->decimal
-  (-> 3261761842 ;hard-coded value for testing on localhost
+  (-> request
+      get-ip
+      ip->vector
+      ip->long
+      ip->decimal
+;  (-> 3261761842 ;hard-coded value for testing on localhost
       get-country-from-ip
       str))
 

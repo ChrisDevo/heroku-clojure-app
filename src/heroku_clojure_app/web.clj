@@ -186,6 +186,7 @@
       get-bank-country
       get-vat-rate
       (/ 100.0)
+      (+ 1)
       (* (get-sales-total request))
       str))
 

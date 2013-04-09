@@ -196,14 +196,13 @@
   VAT) based upon which country-choosing function is used. Which method used
   can be handled here (with another function taking all three country values)
   or on the client-side (passing a single country in the http request)."
-;  (format "€%.2f"
+  (format "€%.2f"
     (-> request
         get-vat-country
         get-vat-rate
         (/ 100.0)
         (+ 1)
-        (* (get-sales-total request))
-        str))
+        (* (get-sales-total request)))))
 
 (def ^:private drawbridge
   (-> (drawbridge/ring-handler)
@@ -214,9 +213,7 @@
   (ANY "/repl" {:as req}
        (drawbridge req))
   (GET "/" []
-    {:status 200
-     :headers {"Content-Type" "text/plain"}
-     :body (pr-str (first ip-country-table))})
+    "<h1>Moshimoshi from my Heroku/Clojure app!</h1>")
   (GET "/whatsmyip" [request]
     your-ip-is)
   (GET "/whatsmydecimalip" [request]

@@ -165,7 +165,7 @@ function calculateTotal() {
     console.log('VAT rate multiplier: ' + vat_multiplier);
 
     sales_total = vat_form.sales_total.value;
-    vat_total = sales_total * vat_multiplier;
+    vat_total = (sales_total * vat_multiplier).toFixed(2);
     vat_total_displayed.innerHTML = ('Your total (including VAT @ ' + vat_rate +
         ' percent) is: €' + vat_total);
     vat_total_submitted.value = vat_total;

@@ -58,24 +58,26 @@ function validateBankID() {
     if (bank_id > 0) {
         bank_id_request.open('POST', 'whatsmybankcountry?bank_id_number='
         + bank_id, false);
+
+        bank_id_request.onreadystatechange = function() {
+
+              console.log('Bank ID: ' + bank_id);
+
+              if ((ip_country_request.status === 200) &&
+                  (ip_country_request.readyState === 4)) {
+
+                  bank_country = bank_id_request.responseText;
+                  console.log('Bank country: ' + bank_country);
+                  bank_country_submitted.value = bank_country;
+                  bank_country_displayed.innerHTML = 'Your bank country is: '
+                      + bank_country;
+
+              }
+        };
+        bank_id_request.send();
     }
 
-    bank_id_request.onreadystatechange = function() {
 
-        console.log('Bank ID: ' + bank_id);
-
-        if ((ip_country_request.status === 200) &&
-            (ip_country_request.readyState === 4)) {
-
-            bank_country = bank_id_request.responseText;
-            console.log('Bank country: ' + bank_country);
-            bank_country_submitted.value = bank_country;
-            bank_country_displayed.innerHTML = 'Your bank country is: '
-                + bank_country;
-
-        }
-    };
-    bank_id_request.send();
 
 }
 

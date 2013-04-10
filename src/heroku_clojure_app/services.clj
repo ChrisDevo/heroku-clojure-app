@@ -144,7 +144,6 @@
     ip->vector
     ip->long
     ip->decimal
-    ;  (-> 3261761842 ;hard-coded value for testing on localhost
     get-country-from-ip
     str))
 

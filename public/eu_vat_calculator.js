@@ -54,8 +54,11 @@ var bank_country_displayed = document.getElementById('bank_id_country');
 function validateBankID() {
 
     bank_id = document.vat_form.bank_id_number.value;
-    bank_id_request.open('POST', 'whatsmybankcountry?bank_id_number='
-        + bank_id);
+
+    if (bank_id > 0) {
+        bank_id_request.open('POST', 'whatsmybankcountry?bank_id_number='
+        + bank_id, false);
+    }
 
     bank_id_request.onreadystatechange = function() {
 

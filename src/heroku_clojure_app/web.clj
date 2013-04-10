@@ -42,6 +42,7 @@
   (POST "/calculatetotal" [request] ; called by evc.html
     services/your-total-is)
   (route/files "/" {:root "public"})
+  (route/resources "/")
   (ANY "*" []
        (route/not-found (slurp (io/resource "404.html")))))
 

@@ -1,9 +1,3 @@
-(slurp "whois.json")
-(slurp "~/whispering-inlet-2503/whispering-inlet-2503/public/whois.json")
-(use [clojure.data.json :as json)
-(use [clojure.data.json :as json])
-(use '[clojure.data.json :as json])
-(require [clojure.data.json : as json])
 (require [clojure.data.json :as json])
 (web.clj/-main)
 (require 'web)
@@ -493,3 +487,14 @@ ip-string
                          Long/parseLong
                          json/write-str)
                       ))
+(require '[clojure.java.jdbc :as sql])
+(sql/with-connection (System/getenv "DATABASE_URL")
+(sql/create-table :testing [:data :text]))
+(sql/with-connection (System/getenv "DATABASE_URL")
+(sql/insert-record :testing {:data "Hello World"}))
+(sql/with-connection (System/getenv "DATABASE_URL")
+(sql/with-query-results results
+["select * from testing"]
+(into [] results)))
+(sql/with-connection (System/getenv "DATABASE_URL")
+(sql/drop-table :testing))

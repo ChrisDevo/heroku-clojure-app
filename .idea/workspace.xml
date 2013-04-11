@@ -2,14 +2,27 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d13b28fe-68d1-41d8-885f-64246c9854dc" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/eu_vat_calculator.js" afterPath="$PROJECT_DIR$/public/eu_vat_calculator.js" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/public/stylesheets/base.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/views/layout.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/views/logs.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/migration.clj" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/public/stylesheets/screen.css" />
+      <change type="NEW" beforePath="" afterPath="$PROJECT_DIR$/resources/public/stylesheets/skeleton.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.gitignore" afterPath="$PROJECT_DIR$/.gitignore" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.lein-repl-history" afterPath="$PROJECT_DIR$/.lein-repl-history" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/public/eu_vat_calculator.html" afterPath="$PROJECT_DIR$/public/eu_vat_calculator.html" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/services.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/services.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="whispering-inlet-2503.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365599792868" ignored="false" />
+    <file path="/Dummy.txt" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365680349918" ignored="false" />
     <file path="/whatsmyip.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364564548480" ignored="false" />
     <file path="/youripis.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364226849705" ignored="false" />
-    <file path="/web.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365600963233" ignored="false" />
+    <file path="/web.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365693300147" ignored="false" />
     <file path="/404.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363689955031" ignored="false" />
     <file path="/fragment.java" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363706529306" ignored="false" />
     <file path="$USER_HOME$/compojure-demo/src/compojure_demo/handler.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363706983793" ignored="false" />
@@ -25,10 +38,16 @@
     <file path="/whatsmydecimalip.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364563894578" ignored="false" />
     <file path="/a.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364564060855" ignored="false" />
     <file path="/web_test.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364916262087" ignored="false" />
-    <file path="/eu_vat_calculator.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365609972410" ignored="false" />
+    <file path="/eu_vat_calculator.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365610726320" ignored="false" />
     <file path="/eu_vat_calculator.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365609878655" ignored="false" />
     <file path="/README.md" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365410372281" ignored="false" />
-    <file path="/services.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365584385226" ignored="false" />
+    <file path="/services.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365694005076" ignored="false" />
+    <file path="/migration.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365691717699" ignored="false" />
+    <file path="/.gitignore" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365687070408" ignored="false" />
+    <file path="/log.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365692732077" ignored="false" />
+    <file path="/logs.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365691283122" ignored="false" />
+    <file path="/layout.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365691583466" ignored="false" />
+    <file path="/a.dummy" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365692132828" ignored="false" />
     <option name="TRACKING_ENABLED" value="true" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -95,15 +114,6 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="eu_vat_calculator.js" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.js">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="76" column="8" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.41011235">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="project.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project.clj">
           <provider selected="true" editor-type-id="text-editor">
@@ -113,10 +123,46 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eu_vat_calculator.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.html">
+      <file leaf-file-name="web.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="82" column="48" selection-start="3561" selection-end="3561" vertical-scroll-proportion="-51.25">
+            <state line="15" column="58" selection-start="734" selection-end="780" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logs.clj" pinned="false" current="true" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="0" column="39" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logs.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/views/logs.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="30" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="layout.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/views/layout.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="17" column="41" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="11" column="33" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -125,16 +171,7 @@
       <file leaf-file-name="services.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/services.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="145" column="15" selection-start="4691" selection-end="4691" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="web.clj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="44" column="22" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0">
+            <state line="190" column="38" selection-start="6041" selection-end="6041" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -158,22 +195,22 @@
   <component name="IdeDocumentHistory">
     <option name="changedFiles">
       <list>
-        <option value="$PROJECT_DIR$/resources/404.html" />
-        <option value="$PROJECT_DIR$/public/youripis.js" />
-        <option value="$PROJECT_DIR$/pom.xml" />
-        <option value="$PROJECT_DIR$/public/whatsmydecimalip.html" />
-        <option value="$PROJECT_DIR$/public/whatsmyip.js" />
-        <option value="$PROJECT_DIR$/public/whatsmydecimalip.js" />
-        <option value="$PROJECT_DIR$/public/whatsmyip.html" />
-        <option value="$PROJECT_DIR$/test/heroku_clojure_app/web_test.clj" />
-        <option value="$PROJECT_DIR$/public/json_request.js" />
-        <option value="$PROJECT_DIR$/public/json_request.html" />
-        <option value="$PROJECT_DIR$/README.md" />
         <option value="$PROJECT_DIR$/project.clj" />
+        <option value="$PROJECT_DIR$/public/eu_vat_calculator.js" />
+        <option value="$PROJECT_DIR$/public/eu_vat_calculator.html" />
+        <option value="$PROJECT_DIR$/Procfile" />
+        <option value="$PROJECT_DIR$/.gitignore" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/controllers/log.clj" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/views/logs.clj" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/migration.clj" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj" />
+        <option value="$PROJECT_DIR$/resources/stylesheets/base.css" />
+        <option value="$PROJECT_DIR$/resources/stylesheets/screen.css" />
+        <option value="$PROJECT_DIR$/resources/stylesheets/skeleton.css" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/views/layout.clj" />
         <option value="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
         <option value="$PROJECT_DIR$/src/heroku_clojure_app/services.clj" />
-        <option value="$PROJECT_DIR$/public/eu_vat_calculator.html" />
-        <option value="$PROJECT_DIR$/public/eu_vat_calculator.js" />
       </list>
     </option>
   </component>
@@ -186,8 +223,8 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="51" />
-    <option name="y" value="80" />
-    <option name="width" value="692" />
+    <option name="y" value="52" />
+    <option name="width" value="781" />
     <option name="height" value="1054" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
@@ -216,8 +253,8 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="Scope" />
       <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -278,7 +315,73 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
-              <option name="myItemId" value="public" />
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heroku_clojure_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="views" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heroku-clojure-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whispering-inlet-2503" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heroku_clojure_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="models" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heroku-clojure-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whispering-inlet-2503" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="src" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heroku_clojure_app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="controllers" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heroku-clojure-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whispering-inlet-2503" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
@@ -294,15 +397,15 @@
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
     <property name="options.lastSelected" value="preferences.customizations" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/project.clj" />
+    <property name="last_opened_file_path" value="$USER_HOME$/shouter" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -349,19 +452,6 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
-      <method />
-    </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
       <module name="" />
       <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
@@ -387,6 +477,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -458,12 +561,13 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="51" y="80" width="692" height="1054" extended-state="0" />
+    <frame x="51" y="52" width="781" height="1054" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32834226" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
@@ -473,13 +577,12 @@
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3498452" sideWeight="0.94169414" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.47891158" sideWeight="0.67165774" order="0" side_tool="false" content_ui="combo" />
       <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3296582" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847533" sideWeight="0.6703418" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32874617" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847533" sideWeight="0.6703418" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32829374" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39814815" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
@@ -550,44 +653,86 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/data.json/0.2.1/data.json-0.2.1.jar!/clojure/data/json_compat_0_1.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="7" column="8" selection-start="392" selection-end="392" vertical-scroll-proportion="0.017441861" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/clojure/1.5.1/clojure-1.5.1.jar!/clojure/test.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="605" column="10" selection-start="20098" selection-end="20098" vertical-scroll-proportion="0.33333334" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/test/heroku_clojure_app/web_test.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="14" selection-start="412" selection-end="412" vertical-scroll-proportion="0.36082473" />
-      </provider>
-    </entry>
-    <entry file="jar://$MAVEN_REPOSITORY$/org/clojure/tools.logging/0.2.6/tools.logging-0.2.6.jar!/clojure/tools/logging.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="2" selection-start="829" selection-end="829" vertical-scroll-proportion="0.3127148" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/README.md">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="14" column="47" selection-start="624" selection-end="624" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/eu_vat_rates.json">
+    <entry file="file://$PROJECT_DIR$/pom.xml">
       <provider selected="true" editor-type-id="text-editor">
         <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.idea/workspace.xml">
+    <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.js">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="361" column="38" selection-start="18320" selection-end="18320" vertical-scroll-proportion="0.3521289" />
+        <state line="76" column="8" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="43" column="3" selection-start="2109" selection-end="2109" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/.gitignore">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
+        <state line="9" column="3" selection-start="94" selection-end="94" vertical-scroll-proportion="0.15202703">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/Procfile">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="74" selection-start="10" selection-end="74" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/public/stylesheets/skeleton.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="221" column="0" selection-start="6844" selection-end="6844" vertical-scroll-proportion="3.7885714">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/public/stylesheets/screen.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="230" column="1" selection-start="5549" selection-end="5549" vertical-scroll-proportion="0.98057145">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/resources/public/stylesheets/base.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="299" column="0" selection-start="9365" selection-end="9365" vertical-scroll-proportion="0.9417143">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="58" selection-start="734" selection-end="780" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/migration.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="71" selection-start="662" selection-end="662" vertical-scroll-proportion="0.28052804">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/views/layout.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="17" column="41" selection-start="655" selection-end="655" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/views/logs.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="11" column="30" selection-start="326" selection-end="326" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/project.clj">
@@ -597,51 +742,23 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/.lein-env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/pom.xml">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/services.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="145" column="15" selection-start="4691" selection-end="4691" vertical-scroll-proportion="0.0">
+        <state line="190" column="38" selection-start="6041" selection-end="6041" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="44" column="22" selection-start="1815" selection-end="1815" vertical-scroll-proportion="0.0">
+        <state line="11" column="33" selection-start="360" selection-end="360" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.html">
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="82" column="48" selection-start="3561" selection-end="3561" vertical-scroll-proportion="-51.25">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="76" column="8" selection-start="2388" selection-end="2388" vertical-scroll-proportion="0.41011235">
+        <state line="0" column="39" selection-start="39" selection-end="39" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>

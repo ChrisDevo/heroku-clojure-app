@@ -1,5 +1,6 @@
 (ns heroku-clojure-app.web
-  (:require [compojure.core :refer [defroutes GET PUT POST DELETE ANY]]
+  (:require [clojure.string :as str]
+            [compojure.core :refer [defroutes GET PUT POST DELETE ANY]]
             [compojure.handler :refer [site] :as handler]
             [compojure.response :as response]
             [compojure.route :as route]
@@ -11,7 +12,11 @@
             [ring.middleware.basic-authentication :as basic]
             [cemerick.drawbridge :as drawbridge]
             [environ.core :refer [env]]
-            [heroku-clojure-app.services :as services]))
+            [heroku-clojure-app.services :as services]
+            [heroku-clojure-app.controllers.logs :as logs]
+            [heroku-clojure-app.views.layout :as layout]
+            [heroku-clojure-app.migration :as schema]
+            [ring.util.response :as ring]))
 
 (defn- authenticated? [user pass]
   ;; TODO: heroku config:add REPL_USER=[...] REPL_PASSWORD=[...]
@@ -19,12 +24,13 @@
 
 (def ^:private drawbridge
   (-> (drawbridge/ring-handler)
-      (session/wrap-session)
-      (basic/wrap-basic-authentication authenticated?)))
+    (session/wrap-session)
+    (basic/wrap-basic-authentication authenticated?)))
 
 (defroutes app-routes
+  logs/routes
   (ANY "/repl" {:as req}
-       (drawbridge req))
+    (drawbridge req))
   (GET "/" []
     "<h1>Moshimoshi from my Heroku/Clojure app!</h1>")
   (GET "/whatsmyip" [request] ; called by evc.js
@@ -44,7 +50,7 @@
   (route/files "/" {:root "public"})
   (route/resources "/")
   (ANY "*" []
-       (route/not-found (slurp (io/resource "404.html")))))
+    (route/not-found (slurp (io/resource "404.html")))))
 
 (def app
   (handler/site app-routes))
@@ -52,21 +58,22 @@
 (defn wrap-error-page [handler]
   (fn [req]
     (try (handler req)
-         (catch Exception e
-           {:status 500
-            :headers {"Content-Type" "text/html"}
-            :body (slurp (io/resource "500.html"))}))))
+      (catch Exception e
+        {:status 500
+         :headers {"Content-Type" "text/html"}
+         :body (slurp (io/resource "500.html"))}))))
 
 (defn -main [& [port]]
+  (schema/migrate)
   (let [port (Integer. (or port (env :port) 5000))
         ;; TODO: heroku config:add SESSION_SECRET=$RANDOM_16_CHARS
         store (cookie/cookie-store {:key (env :session-secret)})]
     (jetty/run-jetty (-> #'app
-                         ((if (env :production)
-                            wrap-error-page
-                            trace/wrap-stacktrace))
-                         (site {:session {:store store}}))
-                     {:port port :join? false})))
+                       ((if (env :production)
+                          wrap-error-page
+                          trace/wrap-stacktrace))
+                       (site {:session {:store store}}))
+      {:port port :join? false})))
 
 ;; For interactive development:
 ;; (.stop server)

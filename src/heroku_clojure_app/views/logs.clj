@@ -1,14 +1,16 @@
 (ns heroku-clojure-app.views.logs
-  (:use [hiccup.core :only (h)])
-  (:require [heroku-clojure-app.views.layout :as layout]))
+  (:use [hiccup.core])
+  (:require [heroku-clojure-app.views.layout :as layout]
+            [clojure-csv.core :as csv]))
 
 (defn display-logs [logs]
   [:div {:id "logs sixteen columns alpha omega"}
    (map
-     (fn [log] [:h2 {:class "log"} (h (:body log))])
+     (fn [log]
+       [:h4 {:class "log"} (html "@ " (:created_at log) " " (:body log))])
      logs)])
 
-(defn index [logs]
-  (layout/common "VISITOR_LOG"
+(defn visitor-log [logs]
+  (layout/common "VISITOR LOG"
     [:div {:class "clear"}]
     (display-logs logs)))

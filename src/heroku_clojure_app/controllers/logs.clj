@@ -5,8 +5,8 @@
             [heroku-clojure-app.views.logs :as view]
             [heroku-clojure-app.models.log :as model]))
 
-(defn index []
-  (view/index (model/all)))
+(defn visitor-log []
+  (view/visitor-log (model/all)))
 
 (defn create [log]
   (when-not (str/blank? log)
@@ -14,5 +14,5 @@
   (ring/redirect "/"))
 
 (defroutes routes
-  (GET  "/" [] (index))
+  (GET  "/" [] (visitor-log))
   (POST "/" [log] (create log)))

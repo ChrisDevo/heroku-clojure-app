@@ -99,7 +99,28 @@ the name of the country as a string."
     (get-param-value :billing_country)
     str))
 
+(defn- get-sales-total [request]
+  "Takes an http request and extracts the value of :sales_total. Returns it as
+a Double."
+  (-> request
+    (get-param-value :sales_total)
+    Double/parseDouble))
+
 (defn- get-vat-country [request]
+  "Takes an http request and extracts the value of :billing_country. Returns
+the name of the country as a string."
+  (-> request
+    (get-param-value :vat_country)
+    str))
+
+(defn- get-vat-rate [request]
+  "Takes an http request and extracts the value of :vat_rate. Returns
+the vat rate as a string."
+  (-> request
+    (get-param-value :vat_rate)
+    Double/parseDouble))
+
+(defn- choose-vat-country [request]
   "Takes an http request containing country parameters (:ip_country,
 :billing_country, and :bank_country). Compares the country values and chooses
 the applicable country for determining the VAT rate."
@@ -108,20 +129,13 @@ the applicable country for determining the VAT rate."
     (get-bank-country request)
     (get-ip-country request)))
 
-(defn- get-vat-rate [country]
+(defn- choose-vat-rate [country]
   "Takes a country name. Returns the :vat_rate value in the map with a matching
 country from country-vat-table."
   (Double/parseDouble
     (first
       (map :vat_rate
         (filter #(= (:country %) country) country-vat-table)))))
-
-(defn- get-sales-total [request]
-  "Takes an http request and extracts the value of :sales_total. Returns it as
-a Double."
-  (-> request
-    (get-param-value :sales_total)
-    Double/parseDouble))
 
 (defn your-ip-is [request]
   "Takes the http request and passes it to the get-ip function. Returns a string
@@ -173,19 +187,30 @@ ip-country-table map that contains the IP address found in the http header."
 vat-rate from country-vat-table map specified by the country value."
   (-> request
     your-vat-country-is
-    get-vat-rate
+    choose-vat-rate
     str))
+
+(defn log-entry [request]
+  (str (conj {}
+    [:ip_country (get-ip-country request)]
+    [:billing_country (get-billing-country request)]
+    [:bank_id_number (get-bank-id request)]
+    [:bank_country (get-bank-country request)]
+    [:sales_total (get-sales-total request)]
+    [:vat_country (get-vat-country request)]
+    [:vat_rate (str (get-vat-rate request))]
+    [:ip (get-ip request)])))
 
 (defn your-total-is [request]
   "Takes an http request and returns the sales total (including appropriate
 VAT) based upon which country-choosing function is used. Which method used
 can be handled here (with another function taking all three country values)
 or on the client-side (passing a single country in the http request)."
-  (logs/create (str request))
   (format "€%.2f"
     (-> request
-      get-vat-country
-      get-vat-rate
+      choose-vat-country
+      choose-vat-rate
       (/ 100.0)
       (+ 1)
-      (* (get-sales-total request)))))
+      (* (get-sales-total request))))
+  (logs/create (log-entry request)))

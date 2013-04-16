@@ -15,7 +15,6 @@
             [heroku-clojure-app.services :as services]
             [heroku-clojure-app.controllers.logs :as logs]
             [heroku-clojure-app.views.layout :as layout]
-            [heroku-clojure-app.migration :as schema]
             [ring.util.response :as ring]))
 
 (defn- authenticated? [user pass]
@@ -31,8 +30,6 @@
   logs/routes
   (ANY "/repl" {:as req}
     (drawbridge req))
-  (GET "/" []
-    "<h1>Moshimoshi from my Heroku/Clojure app!</h1>")
   (GET "/whatsmyip" [request] ; called by evc.js
     services/your-ip-is)
   (GET "/whatsmydecimalip" [request] ; called by evc.js
@@ -64,7 +61,6 @@
          :body (slurp (io/resource "500.html"))}))))
 
 (defn -main [& [port]]
-  (schema/migrate)
   (let [port (Integer. (or port (env :port) 5000))
         ;; TODO: heroku config:add SESSION_SECRET=$RANDOM_16_CHARS
         store (cookie/cookie-store {:key (env :session-secret)})]

@@ -15,7 +15,7 @@
      (include-css "http://fonts.googleapis.com/css?family=Sigmar+One&v1")]
     [:body
      [:div {:id "header"}
-      [:h1 {:class "container"} "VISITOR LOG"]]
+      [:h1 {:class "container"} title]]
      [:div {:id "content" :class "container"} body]]))
 
 (defn four-oh-four []

@@ -17,7 +17,8 @@
                  [org.clojure/data.json "0.2.1"]
                  [org.clojure/tools.logging "0.2.6"]
 		             [postgresql "9.1-901.jdbc4"]
-                 [hiccup "1.0.2"]]
+                 [hiccup "1.0.2"]
+                 [clojure-csv/clojure-csv "2.0.0-alpha1"]]
   :hooks [environ.leiningen.hooks]
   :main heroku-clojure-app.web
   :min-lein-version "2.0.0"

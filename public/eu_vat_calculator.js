@@ -148,6 +148,7 @@ var vat_total = 0;
 var vat_total_displayed = document.getElementById('vat_total_displayed');
 var vat_total_submitted = document.getElementById('vat_total');
 var vat_country = '';
+var vat_country_submitted = document.getElementById('vat_country');
 
 function calculateTotal() {
 
@@ -165,6 +166,8 @@ function calculateTotal() {
 
     console.log('VAT country: ' + vat_country);
     request_vat(vat_country);
+    vat_country_submitted.value = vat_country;
+
 
     console.log('VAT rate: ' + vat_rate);
     console.log('VAT rate multiplier: ' + vat_multiplier);

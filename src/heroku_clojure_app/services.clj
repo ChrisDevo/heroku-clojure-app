@@ -198,7 +198,7 @@ vat-rate from country-vat-table map specified by the country value."
     [:bank_country (get-bank-country request)]
     [:sales_total (get-sales-total request)]
     [:vat_country (get-vat-country request)]
-    [:vat_rate (str (get-vat-rate request))]
+    [:vat_rate (get-vat-rate request)]
     [:ip (get-ip request)])))
 
 (defn your-total-is [request]

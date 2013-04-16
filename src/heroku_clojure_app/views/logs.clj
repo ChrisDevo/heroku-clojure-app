@@ -1,7 +1,6 @@
 (ns heroku-clojure-app.views.logs
   (:use [hiccup.core])
-  (:require [heroku-clojure-app.views.layout :as layout]
-            [clojure-csv.core :as csv]))
+  (:require [heroku-clojure-app.views.layout :as layout]))
 
 (defn display-logs [logs]
   [:div {:id "logs sixteen columns alpha omega"}

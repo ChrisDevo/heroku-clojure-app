@@ -1,15 +1,3 @@
-(use '[clojure.data.json :as json])
-(use 'clojure.data.json)
-(json/write-str 'string)
-(defrecord Whois [ip-low ip-high decimal-low decimal-high abbrev country])
-(json/read-str "whois_partial.json")
-(slurp "whois_partial.json")
-(slurp "public/whois_partial.json")
-(json/read-str "public/whois_partial.json")
-(json/read-str (slurp "public/whois_partial.json"))
-user.Whois
-(eval user.Whois)
-'user.Whois
 (def data (read-json (reader "public/whois_partial.json")))
 (def data (json/read-json (reader "public/whois_partial.json")))
 (def data (json/read-json (slurp "public/whois_partial.json")))
@@ -498,3 +486,15 @@ ip-string
            (into [] results)))
 (sql/with-connection (System/getenv "DATABASE_URL")
          (sql/drop-table :testing))
+(require '[clojure.java.jdbc :as sql])
+(sql/with-connection (System/getenv "DATABASE_URL")
+         (sql/create-table :testing [:data :text]))
+(sql/with-connection (System/getenv "DATABASE_URL")
+         (sql/insert-record :testing {:data "Hello World"}))
+(sql/with-connection (System/getenv "DATABASE_URL")
+         (sql/with-query-results results
+           ["select * from testing"]
+           (into [] results)))
+(sql/with-connection (System/getenv "DATABASE_URL")
+         (sql/drop-table :testing))
+\q

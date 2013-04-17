@@ -1,7 +1,6 @@
 (ns heroku-clojure-app.controllers.logs
   (:use [compojure.core :only (defroutes GET POST)])
-  (:require [clojure.string :as str]
-            [ring.util.response :as ring]
+  (:require [ring.util.response :as ring]
             [heroku-clojure-app.views.logs :as view]
             [heroku-clojure-app.models.log :as model]))
 
@@ -9,7 +8,7 @@
   (view/visitor-log (model/all)))
 
 (defn create [log]
-  (when-not (str/blank? log)
+  (when-not (empty? log)
     (model/create log))
   (ring/redirect "/"))
 

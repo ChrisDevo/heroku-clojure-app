@@ -1,8 +1,10 @@
 (ns heroku-clojure-app.services
+  (:use [compojure.core :only (defroutes GET POST)])
   (:require [clojure.data.json :as json]
             [clojure.string :as string]
             [clojure.java.jdbc :as sql]
-            [heroku-clojure-app.controllers.logs :as logs]))
+            [heroku-clojure-app.controllers.logs :as logs]
+            [ring.util.response :as ring]))
 
 (def ip-country-table
   "Reads a json file containing IP/country data and stores it as Clojure data."
@@ -27,12 +29,12 @@
 
 (defn- ip->long [ip-vector]
   "Takes an IP address vector. Returns a vector with the values converted to
-Long"
+  Long"
   (map #(Long/parseLong %) ip-vector))
 
 (defn- ip->decimal [ip-longs]
   "Takes an IP address vector consisting of Long values. Returns the decimal
-equivalent."
+  equivalent."
   (reduce
     (fn [ip-segment decimal-sum]
       (+ decimal-sum (* 256 ip-segment)))
@@ -40,14 +42,14 @@ equivalent."
 
 (defn- ip-in-range? [ip-country-map decimal-ip]
   "Takes a decimal IP address. Returns the map that contains that decimal IP
-address within its range."
+  address within its range."
   (and (<= (Long/parseLong (:decimal_lower_limit ip-country-map)) decimal-ip)
     (<= decimal-ip (Long/parseLong (:decimal_upper_limit ip-country-map)))))
 
 (defn- get-country-from-ip [ip]
   "Takes a decimal IP address and finds a map in the ip-country-table with the
-IP in its range. Returns the value using the :country key found in the same
-map."
+  IP in its range. Returns the value using the :country key found in the same
+  map."
   (first
     (map :country
       (filter #(ip-in-range? % ip) ip-country-table))))
@@ -55,15 +57,15 @@ map."
 (defn- get-param-value [request param]
   "Takes an http request and a parameter key."
   (-> request
-    :params
-    param))
+      :params
+      param))
 
 (defn- get-bank-id [request]
   "Takes an http request and extracts the value of :bank_id_number. Returns the
 bank ID as a Long."
   (-> request
-    (get-param-value :bank_id_number)
-    Long/parseLong))
+      (get-param-value :bank_id_number)
+      Long/parseLong))
 
 (defn- get-country-from-bank-id [bank-id]
   "Takes an http request. Returns an arbitrary country (as a string) from
@@ -73,10 +75,10 @@ the number of EU countries (27).
 To be fully-functional this should match valid BINs against a current BIN
 database."
   (-> bank-id
-    (mod 27) ; TODO replace this with a function that returns bank country from BIN database
-    country-vat-table
-    :country
-    str))
+      (mod 27) ; TODO replace this with a function that returns bank country from BIN database
+      country-vat-table
+      :country
+      str))
 
 (defn- get-ip-country [request]
   "Takes an http request and extracts the value of :ip_country. Returns
@@ -119,6 +121,20 @@ the vat rate as a string."
   (-> request
     (get-param-value :vat_rate)
     Double/parseDouble))
+
+(defn- get-vat-total [request]
+  "Takes an http request and extracts the value of :vat_total. Returns
+the vat rate as a Double."
+  (-> request
+    (get-param-value :vat_total)
+    Double/parseDouble))
+
+(defn- random-string [length]
+  (let [ascii-codes (concat (range 48 58) (range 65 91) (range 97 123))]
+    (apply str (repeatedly length #(char (rand-nth ascii-codes))))))
+
+(defn- get-transaction-id [length]
+  (random-string length))
 
 (defn- choose-vat-country [request]
   "Takes an http request containing country parameters (:ip_country,
@@ -191,15 +207,17 @@ vat-rate from country-vat-table map specified by the country value."
     str))
 
 (defn log-entry [request]
-  (str (conj {}
-    [:ip_country (get-ip-country request)]
-    [:billing_country (get-billing-country request)]
-    [:bank_id_number (get-bank-id request)]
-    [:bank_country (get-bank-country request)]
-    [:sales_total (get-sales-total request)]
-    [:vat_country (get-vat-country request)]
-    [:vat_rate (get-vat-rate request)]
-    [:ip (get-ip request)])))
+  (vector
+    (get-ip-country request)
+    (get-billing-country request)
+    (get-bank-id request)
+    (get-bank-country request)
+    (get-sales-total request)
+    (get-vat-country request)
+    (get-vat-rate request)
+    (get-vat-total request)
+    (get-ip request)
+    (get-transaction-id 10)))
 
 (defn your-total-is [request]
   "Takes an http request and returns the sales total (including appropriate
@@ -214,3 +232,19 @@ or on the client-side (passing a single country in the http request)."
       (+ 1)
       (* (get-sales-total request))))
   (logs/create (log-entry request)))
+
+(defroutes routes
+  (GET "/whatsmyip" [request] ; called by evc.js
+    your-ip-is)
+  (GET "/whatsmydecimalip" [request] ; called by evc.js
+    your-decimal-ip-is)
+  (GET "/whatsmyipcountry" [request] ; called by evc.js
+    your-ip-country-is)
+  (POST "/whatsmybillingcountry" [request] ; not called
+    your-billing-country-is)
+  (POST "/whatsmybankcountry" [request] ; called by evc.js
+    your-bank-country-is)
+  (POST "/whatsmyvatrate" [request] ; called by evc.js
+    your-vat-rate-is)
+  (POST "/calculatetotal" [request] ; called by evc.html
+    your-total-is))

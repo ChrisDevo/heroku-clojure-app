@@ -13,8 +13,17 @@
     (print "Creating database structure...") (flush)
   (sql/with-connection (System/getenv "DATABASE_URL")
     (sql/create-table :logs
-      [:id :serial "PRIMARY KEY"]
-      [:body :varchar "NOT NULL"]
+      [:id :serial]
+      [:ip_country :varchar]
+      [:billing_country :varchar]
+      [:bank_id_number :int]
+      [:bank_country :varchar]
+      [:sales_total :numeric]
+      [:vat_country :varchar]
+      [:vat_rate :numeric]
+      [:vat_total :numeric]
+      [:ip :varchar]
+      [:transaction_id :varchar "PRIMARY KEY"]
       [:created_at :timestamp "NOT NULL" "DEFAULT CURRENT_TIMESTAMP"]))))
 
 (defn -main []

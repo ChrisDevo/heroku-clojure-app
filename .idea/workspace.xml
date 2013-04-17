@@ -2,15 +2,23 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="d13b28fe-68d1-41d8-885f-64246c9854dc" name="Default" comment="">
+      <change type="DELETED" beforePath="$PROJECT_DIR$/.idea/libraries/Leiningen__clojure_csv_clojure_csv_1_3_2.xml" afterPath="" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.lein-repl-history" afterPath="$PROJECT_DIR$/.lein-repl-history" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/heroku-clojure-app.iml" afterPath="$PROJECT_DIR$/heroku-clojure-app.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/views/logs.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/views/logs.clj" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/project.clj" afterPath="$PROJECT_DIR$/project.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/migration.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/migration.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/services.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/services.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" afterPath="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="whispering-inlet-2503.iws" />
     <ignored path=".idea/workspace.xml" />
-    <file path="/Dummy.txt" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366104917667" ignored="false" />
+    <file path="/Dummy.txt" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366191426894" ignored="false" />
     <file path="/whatsmyip.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364564548480" ignored="false" />
     <file path="/youripis.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1364226849705" ignored="false" />
-    <file path="/web.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365693300147" ignored="false" />
+    <file path="/web.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366205711620" ignored="false" />
     <file path="/404.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363689955031" ignored="false" />
     <file path="/fragment.java" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363706529306" ignored="false" />
     <file path="$USER_HOME$/compojure-demo/src/compojure_demo/handler.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1363706983793" ignored="false" />
@@ -29,11 +37,11 @@
     <file path="/eu_vat_calculator.html" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365610726320" ignored="false" />
     <file path="/eu_vat_calculator.js" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366129625718" ignored="false" />
     <file path="/README.md" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365410372281" ignored="false" />
-    <file path="/services.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366126746986" ignored="false" />
-    <file path="/migration.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365691717699" ignored="false" />
+    <file path="/services.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366205026039" ignored="false" />
+    <file path="/migration.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366199676105" ignored="false" />
     <file path="/.gitignore" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1365687070408" ignored="false" />
-    <file path="/log.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366120234454" ignored="false" />
-    <file path="/logs.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366127840648" ignored="false" />
+    <file path="/log.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366206331500" ignored="false" />
+    <file path="/logs.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366200088374" ignored="false" />
     <file path="/layout.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366120039819" ignored="false" />
     <file path="/a.dummy" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366129790736" ignored="false" />
     <file path="/logs_view.clj" changelist="d13b28fe-68d1-41d8-885f-64246c9854dc" time="1366118178075" ignored="false" />
@@ -103,46 +111,19 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="web.clj" pinned="false" current="false" current-in-tab="false">
+      <file leaf-file-name="web.clj" pinned="false" current="true" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="29" column="13" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.0">
+            <state line="30" column="2" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.52816904">
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="logs.clj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj">
+      <file leaf-file-name="layout.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/views/layout.clj">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="16" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="migration.clj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/migration.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="16" column="33" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="log.clj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="11" column="31" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="services.clj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/services.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="200" column="37" selection-start="6314" selection-end="6314" vertical-scroll-proportion="0.0">
+            <state line="17" column="37" selection-start="646" selection-end="651" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -157,24 +138,6 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="eu_vat_calculator.html" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.html">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="30.5">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="logs.clj" pinned="false" current="true" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/views/logs.clj">
-          <provider selected="true" editor-type-id="text-editor">
-            <state line="2" column="56" selection-start="113" selection-end="113" vertical-scroll-proportion="0.10489511">
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="project.clj" pinned="false" current="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/project.clj">
           <provider selected="true" editor-type-id="text-editor">
@@ -184,10 +147,55 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="layout.clj" pinned="false" current="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/views/layout.clj">
+      <file leaf-file-name="eu_vat_calculator.html" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.html">
           <provider selected="true" editor-type-id="text-editor">
-            <state line="17" column="37" selection-start="646" selection-end="651" vertical-scroll-proportion="0.0">
+            <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="23.625">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="services.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/services.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="80" column="6" selection-start="2752" selection-end="2752" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="log.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="14" column="68" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="migration.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/migration.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="15" column="18" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logs.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="1" column="52" selection-start="42" selection-end="92" vertical-scroll-proportion="0.0">
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="logs.clj" pinned="false" current="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/views/logs.clj">
+          <provider selected="true" editor-type-id="text-editor">
+            <state line="26" column="25" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
               <folding />
             </state>
           </provider>
@@ -218,16 +226,16 @@
         <option value="$PROJECT_DIR$/resources/stylesheets/base.css" />
         <option value="$PROJECT_DIR$/resources/stylesheets/screen.css" />
         <option value="$PROJECT_DIR$/resources/stylesheets/skeleton.css" />
-        <option value="$PROJECT_DIR$/src/heroku_clojure_app/migration.clj" />
-        <option value="$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj" />
         <option value="$PROJECT_DIR$/src/heroku_clojure_app/views/logs_view.clj" />
-        <option value="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
         <option value="$PROJECT_DIR$/src/heroku_clojure_app/views/layout.clj" />
-        <option value="$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj" />
-        <option value="$PROJECT_DIR$/src/heroku_clojure_app/services.clj" />
         <option value="$PROJECT_DIR$/public/eu_vat_calculator.js" />
         <option value="$PROJECT_DIR$/project.clj" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/migration.clj" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj" />
         <option value="$PROJECT_DIR$/src/heroku_clojure_app/views/logs.clj" />
+        <option value="$PROJECT_DIR$/src/heroku_clojure_app/services.clj" />
       </list>
     </option>
   </component>
@@ -239,10 +247,10 @@
     </option>
   </component>
   <component name="ProjectFrameBounds">
-    <option name="x" value="111" />
-    <option name="y" value="54" />
-    <option name="width" value="1051" />
-    <option name="height" value="830" />
+    <option name="x" value="1729" />
+    <option name="y" value="24" />
+    <option name="width" value="978" />
+    <option name="height" value="1022" />
   </component>
   <component name="ProjectLevelVcsManager" settingsEditedManually="false">
     <OptionsSetting value="true" id="Add" />
@@ -270,7 +278,7 @@
       <sortByType />
     </navigator>
     <panes>
-      <pane id="PackagesPane" />
+      <pane id="Scope" />
       <pane id="ProjectPane">
         <subPane>
           <PATH>
@@ -397,13 +405,45 @@
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
             <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heroku-clojure-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whispering-inlet-2503" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="resources" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="stylesheets" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+          </PATH>
+          <PATH>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="heroku-clojure-app" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
+              <option name="myItemId" value="whispering-inlet-2503" />
+              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
+            </PATH_ELEMENT>
+            <PATH_ELEMENT>
               <option name="myItemId" value="public" />
               <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.PsiDirectoryNode" />
             </PATH_ELEMENT>
           </PATH>
         </subPane>
       </pane>
-      <pane id="Scope" />
+      <pane id="PackagesPane" />
     </panes>
   </component>
   <component name="PropertiesComponent">
@@ -413,16 +453,17 @@
     <property name="options.splitter.main.proportions" value="0.3" />
     <property name="recentsLimit" value="5" />
     <property name="MemberChooser.sorted" value="false" />
-    <property name="options.lastSelected" value="preferences.keymap" />
+    <property name="options.lastSelected" value="de.janthomae.leiningenplugin.settings.LeiningenSettings" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/project.clj" />
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="DefaultHtmlFileTemplate" value="Html5" />
     <property name="MemberChooser.copyJavadoc" value="false" />
     <property name="GoToClass.toSaveIncludeLibraries" value="false" />
+    <property name="restartRequiresConfirmation" value="true" />
     <property name="MemberChooser.showClasses" value="true" />
     <property name="GoToClass.includeLibraries" value="false" />
-    <property name="options.splitter.details.proportions" value="0.2" />
     <property name="options.searchVisible" value="true" />
+    <property name="options.splitter.details.proportions" value="0.2" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -434,13 +475,24 @@
       <recent name="$PROJECT_DIR$/public" />
     </key>
   </component>
-  <component name="RunManager">
+  <component name="RunManager" selected="Clojure Script.project">
     <configuration default="false" name="web" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
       <module name="heroku-clojure-app" />
       <setting name="path" value="$PROJECT_DIR$/src/heroku_clojure_app/web.clj" />
       <setting name="vmparams" value="" />
       <setting name="params" value="" />
       <setting name="workDir" value="$PROJECT_DIR$/src/heroku_clojure_app" />
+      <setting name="repl" value="false" />
+      <RunnerSettings RunnerId="Run" />
+      <ConfigurationWrapper RunnerId="Run" />
+      <method />
+    </configuration>
+    <configuration default="false" name="project" type="ClojureScriptRunConfiguration" factoryName="Clojure Script" temporary="true">
+      <module name="heroku-clojure-app" />
+      <setting name="path" value="$PROJECT_DIR$/project.clj" />
+      <setting name="vmparams" value="" />
+      <setting name="params" value="" />
+      <setting name="workDir" value="$PROJECT_DIR$" />
       <setting name="repl" value="false" />
       <RunnerSettings RunnerId="Run" />
       <ConfigurationWrapper RunnerId="Run" />
@@ -461,15 +513,6 @@
       <setting name="repl" value="false" />
       <method />
     </configuration>
-    <configuration default="true" type="LeiningenRunConfiguration" factoryName="Leiningen">
-      <LeiningenRunnerParameters>
-        <option name="goals">
-          <list />
-        </option>
-        <option name="workingDirectory" value="" />
-      </LeiningenRunnerParameters>
-      <method />
-    </configuration>
     <configuration default="true" type="Remote" factoryName="Remote">
       <option name="USE_SOCKET_TRANSPORT" value="true" />
       <option name="SERVER_MODE" value="false" />
@@ -478,17 +521,16 @@
       <option name="PORT" value="5005" />
       <method />
     </configuration>
-    <configuration default="true" type="Applet" factoryName="Applet">
-      <module name="" />
-      <option name="MAIN_CLASS_NAME" />
-      <option name="HTML_FILE_NAME" />
-      <option name="HTML_USED" value="false" />
-      <option name="WIDTH" value="400" />
-      <option name="HEIGHT" value="300" />
-      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
-      <option name="VM_PARAMETERS" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
-      <option name="ALTERNATIVE_JRE_PATH" />
+    <configuration default="true" type="LeiningenRunConfiguration" factoryName="Leiningen">
+      <LeiningenRunnerParameters>
+        <option name="goals">
+          <list>
+            <option value="ring" />
+            <option value="server" />
+          </list>
+        </option>
+        <option name="workingDirectory" value="$PROJECT_DIR$" />
+      </LeiningenRunnerParameters>
       <method />
     </configuration>
     <configuration default="true" type="TestNG" factoryName="TestNG">
@@ -516,6 +558,19 @@
       <envs />
       <properties />
       <listeners />
+      <method />
+    </configuration>
+    <configuration default="true" type="Applet" factoryName="Applet">
+      <module name="" />
+      <option name="MAIN_CLASS_NAME" />
+      <option name="HTML_FILE_NAME" />
+      <option name="HTML_USED" value="false" />
+      <option name="WIDTH" value="400" />
+      <option name="HEIGHT" value="300" />
+      <option name="POLICY_FILE" value="$APPLICATION_HOME_DIR$/bin/appletviewer.policy" />
+      <option name="VM_PARAMETERS" />
+      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="false" />
+      <option name="ALTERNATIVE_JRE_PATH" />
       <method />
     </configuration>
     <configuration default="true" type="Application" factoryName="Application">
@@ -552,9 +607,15 @@
       <patterns />
       <method />
     </configuration>
-    <list size="1">
+    <list size="2">
       <item index="0" class="java.lang.String" itemvalue="Clojure Script.web" />
+      <item index="1" class="java.lang.String" itemvalue="Clojure Script.project" />
     </list>
+    <recent_temporary>
+      <list size="1">
+        <item index="0" class="java.lang.String" itemvalue="Clojure Script.project" />
+      </list>
+    </recent_temporary>
     <configuration name="&lt;template&gt;" type="WebApp" default="true" selected="false">
       <Host>localhost</Host>
       <Port>5050</Port>
@@ -587,29 +648,29 @@
     <servers />
   </component>
   <component name="ToolWindowManager">
-    <frame x="111" y="54" width="1051" height="830" extended-state="0" />
-    <editor active="false" />
+    <frame x="1729" y="24" width="978" height="1022" extended-state="0" />
+    <editor active="true" />
     <layout>
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="JetGradle" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59400547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3090728" sideWeight="0.67166215" order="3" side_tool="false" content_ui="tabs" />
+      <window_info id="Leiningen" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.30818966" sideWeight="0.96995705" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.55433697" order="7" side_tool="true" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32847682" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
-      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32740587" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="true" content_ui="tabs" />
       <window_info id="Maven Projects" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Commander" active="false" anchor="right" auto_hide="false" internal_type="SLIDING" type="SLIDING" visible="false" weight="0.4" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
-      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.4775673" sideWeight="0.67166215" order="0" side_tool="false" content_ui="combo" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32833788" sideWeight="0.445663" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.35237068" sideWeight="0.96995705" order="0" side_tool="false" content_ui="combo" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.3281471" sideWeight="0.445663" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Heroku" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.59400547" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
+      <window_info id="Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32673267" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.39814815" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
     </layout>
@@ -679,46 +740,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/Procfile">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="74" selection-start="10" selection-end="74" vertical-scroll-proportion="0.0" />
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/public/stylesheets/base.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="299" column="0" selection-start="9365" selection-end="9365" vertical-scroll-proportion="0.96666664">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/public/stylesheets/screen.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="230" column="1" selection-start="5549" selection-end="5549" vertical-scroll-proportion="0.9446254">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/resources/public/stylesheets/skeleton.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="221" column="0" selection-start="6827" selection-end="6827" vertical-scroll-proportion="0.90228015">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/.lein-env">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
-      <provider selected="true" editor-type-id="text-editor">
-        <state line="29" column="13" selection-start="1230" selection-end="1230" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/views/layout.clj">
       <provider selected="true" editor-type-id="text-editor">
         <state line="17" column="37" selection-start="646" selection-end="651" vertical-scroll-proportion="0.0">
@@ -726,44 +747,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/migration.clj">
+    <entry file="file://$PROJECT_DIR$/Procfile">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="33" selection-start="590" selection-end="590" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="0" column="74" selection-start="10" selection-end="74" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj">
+    <entry file="file://$PROJECT_DIR$/resources/public/stylesheets/base.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="16" column="16" selection-start="468" selection-end="468" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="299" column="0" selection-start="9365" selection-end="9365" vertical-scroll-proportion="0.96666664" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj">
+    <entry file="file://$PROJECT_DIR$/resources/public/stylesheets/screen.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="11" column="31" selection-start="358" selection-end="358" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="230" column="1" selection-start="5549" selection-end="5549" vertical-scroll-proportion="0.9446254" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/services.clj">
+    <entry file="file://$PROJECT_DIR$/resources/public/stylesheets/skeleton.css">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="200" column="37" selection-start="6314" selection-end="6314" vertical-scroll-proportion="0.0">
-          <folding />
-        </state>
+        <state line="221" column="0" selection-start="6827" selection-end="6827" vertical-scroll-proportion="0.90228015" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.html">
+    <entry file="file://$PROJECT_DIR$/.lein-env">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="30.5">
-          <folding />
-        </state>
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="0.0" />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.js">
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/views/layout.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="161" column="14" selection-start="5184" selection-end="5184" vertical-scroll-proportion="0.0">
+        <state line="17" column="37" selection-start="646" selection-end="651" vertical-scroll-proportion="0.0">
           <folding />
         </state>
       </provider>
@@ -775,9 +786,58 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.html">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="0" column="0" selection-start="0" selection-end="0" vertical-scroll-proportion="23.625">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/models/log.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="14" column="68" selection-start="490" selection-end="490" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/migration.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="15" column="18" selection-start="541" selection-end="541" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/controllers/logs.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="1" column="52" selection-start="42" selection-end="92" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/views/logs.clj">
       <provider selected="true" editor-type-id="text-editor">
-        <state line="2" column="56" selection-start="113" selection-end="113" vertical-scroll-proportion="0.10489511">
+        <state line="26" column="25" selection-start="907" selection-end="907" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/services.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="80" column="6" selection-start="2752" selection-end="2752" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/public/eu_vat_calculator.js">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="161" column="14" selection-start="5184" selection-end="5184" vertical-scroll-proportion="0.0">
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/src/heroku_clojure_app/web.clj">
+      <provider selected="true" editor-type-id="text-editor">
+        <state line="30" column="2" selection-start="1233" selection-end="1233" vertical-scroll-proportion="0.52816904">
           <folding />
         </state>
       </provider>

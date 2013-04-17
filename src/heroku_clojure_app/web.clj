@@ -28,22 +28,9 @@
 
 (defroutes app-routes
   logs/routes
+  services/routes
   (ANY "/repl" {:as req}
     (drawbridge req))
-  (GET "/whatsmyip" [request] ; called by evc.js
-    services/your-ip-is)
-  (GET "/whatsmydecimalip" [request] ; called by evc.js
-    services/your-decimal-ip-is)
-  (GET "/whatsmyipcountry" [request] ; called by evc.js
-    services/your-ip-country-is)
-  (POST "/whatsmybillingcountry" [request] ; not called
-    services/your-billing-country-is)
-  (POST "/whatsmybankcountry" [request] ; called by evc.js
-    services/your-bank-country-is)
-  (POST "/whatsmyvatrate" [request] ; called by evc.js
-    services/your-vat-rate-is)
-  (POST "/calculatetotal" [request] ; called by evc.html
-    services/your-total-is)
   (route/files "/" {:root "public"})
   (route/resources "/")
   (ANY "*" []
